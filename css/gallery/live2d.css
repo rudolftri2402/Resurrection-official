@@ -1,0 +1,1353 @@
+        body {
+            margin: 100;
+            padding-top: 55px;
+            font-family: Georgia, serif;
+        }
+
+        /* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Lapisan gelap agar tulisan mudah dibaca */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: -1;
+}
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .menu-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-info {
+            padding: 14px;
+        }
+
+        .menu-info h3 {
+            color: #ffffff;
+            margin: 5px 0 10px;
+        }
+
+        .menu-info p {
+            color: #ffffff;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .harga {
+            color: #d8b56b;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .informasi {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .pemesanan {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .video-section video {
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: #000000;
+
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 15px 22px;
+}
+
+.navbar a:hover {
+    background-color: #d8b56b;
+}
+
+
+
+
+
+/* =========================================================
+   LIVE2D PAGE
+========================================================= */
+
+.live2d-page {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201,169,110,0.05),
+            transparent 40%
+        ),
+        #050505;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.live2d-header {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 70px 5% 30px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+}
+
+
+
+.live2d-header span {
+
+    color: #c9a96e;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+}
+
+
+
+.live2d-header h1 {
+
+    margin: 10px 0 0;
+
+    font-size:
+        clamp(45px, 6vw, 75px);
+
+    font-weight: 300;
+
+    letter-spacing: 10px;
+
+}
+
+
+
+.live2d-header p {
+
+    max-width: 300px;
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.live2d-container {
+
+    max-width: 1400px;
+
+    min-height: 650px;
+
+    margin: auto;
+
+    padding: 0 5%;
+
+    display: grid;
+
+    grid-template-columns:
+        170px
+        1fr
+        260px;
+
+    gap: 20px;
+
+}
+
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.live2d-sidebar {
+
+    padding-top: 30px;
+
+}
+
+
+
+.live2d-sidebar-title {
+
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.live2d-character {
+
+    width: 100%;
+
+    padding: 18px 10px;
+
+    background: transparent;
+
+    border: none;
+
+    border-left:
+        2px solid transparent;
+
+    color: #666;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.live2d-character span {
+
+    display: block;
+
+    font-size: 8px;
+
+    color: #444;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.live2d-character strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: 400;
+
+}
+
+
+
+.live2d-character small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: #444;
+
+}
+
+
+
+.live2d-character:hover {
+
+    color: #ffffff;
+
+}
+
+
+
+.live2d-character.active {
+
+    color: #c9a96e;
+
+    border-left-color:
+        #c9a96e;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(201,169,110,0.1),
+            transparent
+        );
+
+}
+
+
+
+.live2d-character.active span,
+.live2d-character.active small {
+
+    color: #8c7750;
+
+}
+
+
+
+/* =========================================================
+   PREVIEW
+========================================================= */
+
+.live2d-preview {
+
+    position: relative;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    transition: opacity 0.25s ease;
+
+}
+
+
+
+.live2d-changing {
+
+    opacity: 0;
+
+}
+
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.live2d-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-position: center;
+
+    background-size: cover;
+
+    transition: 0.6s;
+
+}
+
+
+
+.live2d-background::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.7)
+        );
+
+}
+
+
+
+/* =========================================================
+   MODEL FRAME
+========================================================= */
+
+.live2d-model {
+
+    position: absolute;
+
+    inset: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+.live2d-frame {
+
+    position: relative;
+
+    width: 70%;
+
+    height: 85%;
+
+    border:
+        1px solid
+        rgba(201,169,110,0.2);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+
+.model-placeholder {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #555;
+
+    letter-spacing: 4px;
+
+}
+
+
+
+.model-placeholder span {
+
+    font-size: 10px;
+
+    color: #c9a96e;
+
+}
+
+
+
+.model-placeholder strong {
+
+    font-size: 35px;
+
+    font-weight: 300;
+
+    color: #ffffff;
+
+    letter-spacing: 8px;
+
+}
+
+
+
+.model-placeholder small {
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+}
+
+
+
+/* =========================================================
+   FRAME CORNERS
+========================================================= */
+
+.frame-corner {
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+
+
+.frame-corner::before,
+.frame-corner::after {
+
+    content: "";
+
+    position: absolute;
+
+    background: #c9a96e;
+
+}
+
+
+
+.top-left {
+
+    top: -1px;
+
+    left: -1px;
+
+}
+
+
+
+.top-left::before {
+
+    width: 18px;
+
+    height: 1px;
+
+    top: 0;
+
+    left: 0;
+
+}
+
+
+
+.top-left::after {
+
+    width: 1px;
+
+    height: 18px;
+
+    top: 0;
+
+    left: 0;
+
+}
+
+
+
+.top-right {
+
+    top: -1px;
+
+    right: -1px;
+
+}
+
+
+
+.top-right::before {
+
+    width: 18px;
+
+    height: 1px;
+
+    top: 0;
+
+    right: 0;
+
+}
+
+
+
+.top-right::after {
+
+    width: 1px;
+
+    height: 18px;
+
+    top: 0;
+
+    right: 0;
+
+}
+
+
+
+.bottom-left {
+
+    bottom: -1px;
+
+    left: -1px;
+
+}
+
+
+
+.bottom-left::before {
+
+    width: 18px;
+
+    height: 1px;
+
+    bottom: 0;
+
+    left: 0;
+
+}
+
+
+
+.bottom-left::after {
+
+    width: 1px;
+
+    height: 18px;
+
+    bottom: 0;
+
+    left: 0;
+
+}
+
+
+
+.bottom-right {
+
+    bottom: -1px;
+
+    right: -1px;
+
+}
+
+
+
+.bottom-right::before {
+
+    width: 18px;
+
+    height: 1px;
+
+    bottom: 0;
+
+    right: 0;
+
+}
+
+
+
+.bottom-right::after {
+
+    width: 1px;
+
+    height: 18px;
+
+    bottom: 0;
+
+    right: 0;
+
+}
+
+
+
+/* =========================================================
+   PREVIEW LABEL
+========================================================= */
+
+.live2d-preview-label {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    z-index: 5;
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+}
+
+
+
+.live2d-preview-label span {
+
+    color: #777;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+}
+
+
+
+.live2d-preview-label strong {
+
+    color: #c9a96e;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+/* =========================================================
+   CHARACTER NAME
+========================================================= */
+
+.live2d-name {
+
+    position: absolute;
+
+    left: 30px;
+
+    bottom: 25px;
+
+    z-index: 5;
+
+}
+
+
+
+.live2d-name span {
+
+    color: #c9a96e;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+.live2d-name h2 {
+
+    margin: 5px 0;
+
+    font-size: 42px;
+
+    font-weight: 300;
+
+    letter-spacing: 7px;
+
+}
+
+
+
+.live2d-name p {
+
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+
+
+/* =========================================================
+   INFORMATION PANEL
+========================================================= */
+
+.live2d-information {
+
+    padding: 35px 20px;
+
+    background:
+        rgba(255,255,255,0.02);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+
+.info-label {
+
+    color: #c9a96e;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+}
+
+
+
+.live2d-information h2 {
+
+    margin: 12px 0 25px;
+
+    font-size: 28px;
+
+    font-weight: 300;
+
+    letter-spacing: 4px;
+
+}
+
+
+
+.info-line {
+
+    width: 40px;
+
+    height: 1px;
+
+    background: #c9a96e;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.info-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    padding: 15px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+
+.info-item span {
+
+    color: #555;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+}
+
+
+
+.info-item strong {
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+/* =========================================================
+   EXPRESSIONS
+========================================================= */
+
+.expression-section {
+
+    margin-top: 30px;
+
+}
+
+
+
+.expression-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 15px;
+
+}
+
+
+
+.expression-list button {
+
+    padding: 7px 9px;
+
+    background: transparent;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    color: #777;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.expression-list button:hover {
+
+    border-color: #c9a96e;
+
+    color: #c9a96e;
+
+}
+
+
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.live2d-carousel {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        25px 5% 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+
+.live2d-cards {
+
+    flex: 1;
+
+    display: flex;
+
+    gap: 10px;
+
+    overflow: hidden;
+
+}
+
+
+
+.live2d-card {
+
+    flex: 1;
+
+    min-width: 160px;
+
+    height: 85px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #101010;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    color: #ffffff;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.live2d-card img {
+
+    width: 85px;
+
+    height: 85px;
+
+    object-fit: cover;
+
+    filter: grayscale(70%);
+
+    opacity: 0.6;
+
+    transition: 0.3s;
+
+}
+
+
+
+.live2d-card div {
+
+    padding: 10px;
+
+}
+
+
+
+.live2d-card span {
+
+    display: block;
+
+    color: #555;
+
+    font-size: 7px;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.live2d-card strong {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 400;
+
+}
+
+
+
+.live2d-card:hover {
+
+    border-color:
+        rgba(201,169,110,0.5);
+
+}
+
+
+
+.live2d-card:hover img {
+
+    filter: grayscale(0);
+
+    opacity: 1;
+
+}
+
+
+
+.live2d-card.active {
+
+    border-color:
+        #c9a96e;
+
+}
+
+
+
+.live2d-card.active img {
+
+    filter: grayscale(0);
+
+    opacity: 1;
+
+}
+
+
+
+.live2d-arrow {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    background: transparent;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    color: #aaa;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.live2d-arrow:hover {
+
+    border-color: #c9a96e;
+
+    color: #c9a96e;
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .live2d-container {
+
+        grid-template-columns:
+            130px
+            1fr;
+
+    }
+
+
+    .live2d-information {
+
+        display: none;
+
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    .live2d-header {
+
+        padding:
+            60px 20px 30px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .live2d-container {
+
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 0 20px;
+
+    }
+
+
+    .live2d-sidebar {
+
+        display: flex;
+
+        gap: 5px;
+
+        overflow-x: auto;
+
+        padding: 0;
+
+    }
+
+
+    .live2d-sidebar-title {
+
+        display: none;
+
+    }
+
+
+    .live2d-character {
+
+        min-width: 120px;
+
+        border-left: none;
+
+        border-bottom:
+            2px solid transparent;
+
+    }
+
+
+    .live2d-character.active {
+
+        border-left: none;
+
+        border-bottom:
+            2px solid #c9a96e;
+
+    }
+
+
+    .live2d-preview {
+
+        min-height: 550px;
+
+    }
+
+
+    .live2d-model {
+
+        inset: 30px;
+
+    }
+
+
+    .live2d-frame {
+
+        width: 85%;
+
+    }
+
+
+    .live2d-name h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .live2d-cards {
+
+        overflow-x: auto;
+
+    }
+
+
+    .live2d-card {
+
+        min-width: 170px;
+
+    }
+
+}

@@ -1,0 +1,745 @@
+        body {
+            margin: 100;
+            padding-top: 55px;
+            font-family: Georgia, serif;
+        }
+
+        /* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Lapisan gelap agar tulisan mudah dibaca */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: -1;
+}
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .menu-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-info {
+            padding: 14px;
+        }
+
+        .menu-info h3 {
+            color: #ffffff;
+            margin: 5px 0 10px;
+        }
+
+        .menu-info p {
+            color: #ffffff;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .harga {
+            color: #d8b56b;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .informasi {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .pemesanan {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .video-section video {
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: #000000;
+
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 15px 22px;
+}
+
+.navbar a:hover {
+    background-color: #d8b56b;
+}
+/* ========================================
+   DOWNLOAD PAGE
+======================================== */
+
+
+/* =========================
+   HEADER
+========================= */
+
+.download-page {
+
+    padding-bottom: 100px;
+
+}
+
+
+.download-header {
+
+    text-align: center;
+
+    padding: 130px 20px 60px;
+
+}
+
+
+.download-subtitle {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.6;
+
+    margin-bottom: 12px;
+
+}
+
+
+.download-header h1 {
+
+    font-size: 48px;
+
+    letter-spacing: 8px;
+
+    margin: 0;
+
+}
+
+
+.download-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: #c9a96e;
+
+    margin: 25px auto;
+
+}
+
+
+.download-description {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================
+   PLATFORM SECTION
+========================= */
+
+.platform-section {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: 20px auto 100px;
+
+}
+
+
+.platform-title {
+
+    margin-bottom: 30px;
+
+}
+
+
+.platform-title p {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #c9a96e;
+
+    margin: 0 0 6px;
+
+}
+
+
+.platform-title h2 {
+
+    font-size: 30px;
+
+    letter-spacing: 3px;
+
+    margin: 0;
+
+}
+
+
+/* =========================
+   PLATFORM GRID
+========================= */
+
+.platform-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* =========================
+   PLATFORM CARD
+========================= */
+
+.platform-card {
+
+    min-height: 420px;
+
+    background: #111;
+
+    border: 1px solid
+        rgba(255,255,255,0.1);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
+
+}
+
+
+.platform-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(201,169,110,0.5);
+
+}
+
+
+/* =========================
+   PLATFORM ICON
+========================= */
+
+.platform-icon {
+
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(201,169,110,0.08),
+            rgba(0,0,0,0.3)
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+.platform-icon span {
+
+    font-size: 30px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================
+   PLATFORM CONTENT
+========================= */
+
+.platform-content {
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+}
+
+
+.platform-status {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #c9a96e;
+
+    margin-bottom: 10px;
+
+}
+
+
+.platform-content h3 {
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+
+    margin: 0 0 15px;
+
+}
+
+
+.platform-content p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    opacity: 0.65;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================
+   PLATFORM INFO
+========================= */
+
+.platform-info {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: auto;
+
+    margin-bottom: 20px;
+
+}
+
+
+.platform-info span {
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    padding: 7px 10px;
+
+    border: 1px solid
+        rgba(255,255,255,0.12);
+
+    opacity: 0.6;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.platform-button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    background: transparent;
+
+    color: #777;
+
+    border: 1px solid
+        rgba(255,255,255,0.12);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =========================
+   REQUIREMENTS
+========================= */
+
+.requirements-section {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding-top: 20px;
+
+}
+
+
+.requirements-header {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.requirements-header > p:first-child {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #c9a96e;
+
+    margin-bottom: 8px;
+
+}
+
+
+.requirements-header h2 {
+
+    font-size: 30px;
+
+    letter-spacing: 3px;
+
+    margin: 0 0 15px;
+
+}
+
+
+.requirements-description {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    opacity: 0.55;
+
+}
+
+
+/* =========================
+   REQUIREMENTS GRID
+========================= */
+
+.requirements-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.requirements-card {
+
+    padding: 35px;
+
+    background: #111;
+
+    border: 1px solid
+        rgba(255,255,255,0.1);
+
+}
+
+
+.requirements-card > span {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #c9a96e;
+
+}
+
+
+.requirements-card h3 {
+
+    font-size: 22px;
+
+    letter-spacing: 1px;
+
+    margin: 10px 0 25px;
+
+}
+
+
+.requirements-card ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.requirements-card li {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    font-size: 12px;
+
+    opacity: 0.65;
+
+}
+
+
+.requirements-card li:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.requirements-card li strong {
+
+    color: white;
+
+    font-weight: normal;
+
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.download-note {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 70px auto 0;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.1);
+
+}
+
+
+.download-note p {
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    opacity: 0.45;
+
+    margin: 0;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .platform-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .requirements-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .download-header {
+
+        padding-top: 100px;
+
+    }
+
+
+    .download-header h1 {
+
+        font-size: 36px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .platform-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .platform-card {
+
+        min-height: 390px;
+
+    }
+
+
+    .requirements-card li {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+}

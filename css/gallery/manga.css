@@ -1,0 +1,569 @@
+        body {
+            margin: 100;
+            padding-top: 55px;
+            font-family: Georgia, serif;
+        }
+
+        /* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Lapisan gelap agar tulisan mudah dibaca */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: -1;
+}
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .menu-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-info {
+            padding: 14px;
+        }
+
+        .menu-info h3 {
+            color: #ffffff;
+            margin: 5px 0 10px;
+        }
+
+        .menu-info p {
+            color: #ffffff;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .harga {
+            color: #d8b56b;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .informasi {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .pemesanan {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .video-section video {
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: #000000;
+
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 15px 22px;
+}
+
+.navbar a:hover {
+    background-color: #d8b56b;
+}
+
+
+
+
+
+
+/* =========================================================
+   MANGA PAGE
+========================================================= */
+
+.manga-page {
+    background: #080808;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   MANGA HEADER
+========================================================= */
+
+.manga-header {
+    text-align: center;
+    padding: 150px 20px 80px;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.18);
+}
+
+.manga-header-small {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 12px;
+    letter-spacing: 5px;
+
+    color: #c9a96e;
+}
+
+.manga-header h1 {
+    margin: 0;
+
+    font-size: 52px;
+    font-weight: 400;
+
+    letter-spacing: 12px;
+}
+
+.manga-header p {
+    max-width: 650px;
+
+    margin: 22px auto 0;
+
+    color: #999;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+
+/* =========================================================
+   MANGA SECTION
+========================================================= */
+
+.manga-section {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 90px 30px;
+}
+
+
+.manga-section-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 45px;
+}
+
+
+.manga-section-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #c9a96e;
+}
+
+
+.manga-section-heading h2 {
+    margin: 0;
+
+    font-size: 34px;
+    font-weight: 400;
+
+    letter-spacing: 5px;
+}
+
+
+.manga-section-heading p {
+    max-width: 650px;
+
+    margin-top: 15px;
+
+    color: #888;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =========================================================
+   CHAPTER GRID
+========================================================= */
+
+.manga-chapter-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+
+/* =========================================================
+   CHAPTER CARD
+========================================================= */
+
+.manga-chapter-card {
+    display: block;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    background: #101010;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.manga-chapter-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(201, 169, 110, 0.6);
+
+    background: #141414;
+}
+
+
+
+/* =========================================================
+   CHAPTER IMAGE
+========================================================= */
+
+.manga-chapter-image {
+    position: relative;
+
+    overflow: hidden;
+
+    aspect-ratio: 3 / 4;
+
+    background: #151515;
+}
+
+
+.manga-chapter-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+.manga-chapter-card:hover
+.manga-chapter-image img {
+    transform: scale(1.06);
+
+    filter: brightness(0.65);
+}
+
+
+
+/* =========================================================
+   CHAPTER OVERLAY
+========================================================= */
+
+.manga-chapter-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.75)
+        );
+
+    transition: opacity 0.35s ease;
+}
+
+
+.manga-chapter-card:hover
+.manga-chapter-overlay {
+    opacity: 1;
+}
+
+
+.manga-chapter-overlay span {
+    padding: 11px 18px;
+
+    border: 1px solid rgba(201, 169, 110, 0.8);
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+
+/* =========================================================
+   CHAPTER INFO
+========================================================= */
+
+.manga-chapter-info {
+    padding: 20px;
+}
+
+
+.manga-chapter-number {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #c9a96e;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+.manga-chapter-info h3 {
+    margin: 0;
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+
+.manga-chapter-info p {
+    margin: 10px 0 0;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.manga-divider {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+.manga-divider::before,
+.manga-divider::after {
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(201, 169, 110, 0.35)
+        );
+}
+
+
+.manga-divider::after {
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            rgba(201, 169, 110, 0.35)
+        );
+}
+
+
+.manga-divider span {
+    color: #c9a96e;
+
+    font-size: 20px;
+}
+
+
+
+/* =========================================================
+   SIDE STORY
+========================================================= */
+
+.manga-side-section {
+    padding-top: 80px;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .manga-chapter-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .manga-header {
+        padding:
+            120px 20px 60px;
+    }
+
+
+    .manga-header h1 {
+        font-size: 34px;
+
+        letter-spacing: 7px;
+    }
+
+
+    .manga-section {
+        padding:
+            65px 20px;
+    }
+
+
+    .manga-section-heading h2 {
+        font-size: 27px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .manga-chapter-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .manga-chapter-image {
+        aspect-ratio: 4 / 5;
+    }
+
+
+    .manga-divider {
+        margin: 0 20px;
+    }
+
+}

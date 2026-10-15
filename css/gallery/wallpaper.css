@@ -1,0 +1,980 @@
+        body {
+            margin: 100;
+            padding-top: 55px;
+            font-family: Georgia, serif;
+        }
+
+        /* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Lapisan gelap agar tulisan mudah dibaca */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: -1;
+}
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .menu-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-info {
+            padding: 14px;
+        }
+
+        .menu-info h3 {
+            color: #ffffff;
+            margin: 5px 0 10px;
+        }
+
+        .menu-info p {
+            color: #ffffff;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .harga {
+            color: #d8b56b;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .informasi {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .pemesanan {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .video-section video {
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: #000000;
+
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 15px 22px;
+}
+
+.navbar a:hover {
+    background-color: #d8b56b;
+}
+
+
+
+
+/* =========================================================
+   WALLPAPER PAGE
+========================================================= */
+
+.wallpaper-page {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(201,169,110,0.06),
+            transparent 35%
+        ),
+        #050505;
+
+    color: #ffffff;
+
+    padding-bottom: 70px;
+
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.wallpaper-header {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 90px 30px 45px;
+
+}
+
+
+
+.wallpaper-header > span {
+
+    color: #c9a96e;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+}
+
+
+
+.wallpaper-header h1 {
+
+    margin: 12px 0;
+
+    font-size:
+        clamp(45px, 7vw, 80px);
+
+    font-weight: 300;
+
+    letter-spacing: 10px;
+
+}
+
+
+
+.wallpaper-header p {
+
+    max-width: 500px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+.wallpaper-filter {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        0 30px 30px;
+
+    display: flex;
+
+    gap: 8px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.1);
+
+}
+
+
+
+.wallpaper-filter-button {
+
+    padding:
+        12px 22px;
+
+    background: transparent;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    color: #666;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.wallpaper-filter-button:hover {
+
+    color: #ffffff;
+
+    border-color:
+        rgba(255,255,255,0.35);
+
+}
+
+
+
+.wallpaper-filter-button.active {
+
+    color: #c9a96e;
+
+    border-color: #c9a96e;
+
+    background:
+        rgba(201,169,110,0.06);
+
+}
+
+
+
+/* =========================================================
+   WALLPAPER GRID
+========================================================= */
+
+.wallpaper-container {
+
+    max-width: 1250px;
+
+    margin: 45px auto 0;
+
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+
+
+.wallpaper-card {
+
+    min-width: 0;
+
+    transition:
+        opacity 0.3s,
+        transform 0.3s;
+
+}
+
+
+
+.wallpaper-card.hidden {
+
+    display: none;
+
+}
+
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.wallpaper-image {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #111;
+
+    cursor: pointer;
+
+}
+
+
+
+.wallpaper-tall
+.wallpaper-image {
+
+    aspect-ratio: 9 / 16;
+
+}
+
+
+
+.wallpaper-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
+
+}
+
+
+
+.wallpaper-card:hover
+.wallpaper-image img {
+
+    transform: scale(1.05);
+
+}
+
+
+
+.wallpaper-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            transparent 30%,
+            rgba(0,0,0,0.85)
+        );
+
+    opacity: 0;
+
+    transition: 0.4s;
+
+}
+
+
+
+.wallpaper-card:hover
+.wallpaper-overlay {
+
+    opacity: 1;
+
+}
+
+
+
+.wallpaper-overlay span {
+
+    color: #c9a96e;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+
+
+.wallpaper-overlay h2 {
+
+    margin: 8px 0 15px;
+
+    font-size: 24px;
+
+    font-weight: 300;
+
+    letter-spacing: 4px;
+
+}
+
+
+
+.wallpaper-view {
+
+    align-self: flex-start;
+
+    padding:
+        9px 18px;
+
+    border:
+        1px solid
+        #c9a96e;
+
+    background: transparent;
+
+    color: #c9a96e;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.wallpaper-view:hover {
+
+    background: #c9a96e;
+
+    color: #050505;
+
+}
+
+
+
+/* =========================================================
+   CARD INFORMATION
+========================================================= */
+
+.wallpaper-card-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 15px 3px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+
+.wallpaper-card-info span {
+
+    color: #c9a96e;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+}
+
+
+
+.wallpaper-card-info h3 {
+
+    margin: 7px 0 0;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+.wallpaper-resolution {
+
+    flex-shrink: 0;
+
+    color: #555 !important;
+
+    font-size: 8px !important;
+
+    letter-spacing: 1px !important;
+
+}
+
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.wallpaper-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 500;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px;
+
+    background:
+        rgba(0,0,0,0.94);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+}
+
+
+
+.wallpaper-modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+
+.wallpaper-modal-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(201,169,110,0.08),
+            transparent 55%
+        );
+
+    pointer-events: none;
+
+}
+
+
+
+/* =========================================================
+   MODAL CONTENT
+========================================================= */
+
+.wallpaper-modal-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1100px;
+
+    max-height: 90vh;
+
+    width: 90%;
+
+}
+
+
+
+.wallpaper-modal-content img {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 75vh;
+
+    object-fit: contain;
+
+    margin: auto;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,0.8);
+
+}
+
+
+
+.wallpaper-modal-info {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 18px;
+
+}
+
+
+
+.wallpaper-modal-info span {
+
+    color: #c9a96e;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+
+
+.wallpaper-modal-info h2 {
+
+    margin: 6px 0 0;
+
+    font-size: 17px;
+
+    font-weight: 300;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+.wallpaper-download {
+
+    padding:
+        12px 22px;
+
+    border:
+        1px solid
+        #c9a96e;
+
+    color: #c9a96e;
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+
+}
+
+
+
+.wallpaper-download:hover {
+
+    background: #c9a96e;
+
+    color: #050505;
+
+}
+
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.wallpaper-close {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 35px;
+
+    z-index: 10;
+
+    width: 45px;
+
+    height: 45px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.2);
+
+    background: transparent;
+
+    color: #aaa;
+
+    font-size: 30px;
+
+    font-weight: 200;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.wallpaper-close:hover {
+
+    color: #c9a96e;
+
+    border-color: #c9a96e;
+
+}
+
+
+
+/* =========================================================
+   PREVIOUS / NEXT
+========================================================= */
+
+.wallpaper-modal-prev,
+.wallpaper-modal-next {
+
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 10;
+
+    width: 50px;
+
+    height: 70px;
+
+    transform:
+        translateY(-50%);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    background:
+        rgba(0,0,0,0.4);
+
+    color: #aaa;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.wallpaper-modal-prev {
+
+    left: 25px;
+
+}
+
+
+
+.wallpaper-modal-next {
+
+    right: 25px;
+
+}
+
+
+
+.wallpaper-modal-prev:hover,
+.wallpaper-modal-next:hover {
+
+    color: #c9a96e;
+
+    border-color: #c9a96e;
+
+}
+
+
+
+/* =========================================================
+   BODY LOCK
+========================================================= */
+
+body.modal-open {
+
+    overflow: hidden;
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .wallpaper-header {
+
+        padding:
+            65px 20px 35px;
+
+    }
+
+
+    .wallpaper-filter {
+
+        padding:
+            0 20px 20px;
+
+        overflow-x: auto;
+
+    }
+
+
+    .wallpaper-filter-button {
+
+        white-space: nowrap;
+
+    }
+
+
+    .wallpaper-container {
+
+        grid-template-columns: 1fr;
+
+        padding: 0 20px;
+
+        margin-top: 30px;
+
+    }
+
+
+    .wallpaper-modal {
+
+        padding: 20px;
+
+    }
+
+
+    .wallpaper-modal-content {
+
+        width: 100%;
+
+    }
+
+
+    .wallpaper-modal-info {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .wallpaper-modal-prev,
+    .wallpaper-modal-next {
+
+        width: 35px;
+
+        height: 50px;
+
+        font-size: 25px;
+
+    }
+
+
+    .wallpaper-modal-prev {
+
+        left: 5px;
+
+    }
+
+
+    .wallpaper-modal-next {
+
+        right: 5px;
+
+    }
+
+
+    .wallpaper-close {
+
+        top: 10px;
+
+        right: 10px;
+
+    }
+
+}

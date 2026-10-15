@@ -1,0 +1,430 @@
+        body {
+            margin: 100;
+            padding-top: 55px;
+            font-family: Georgia, serif;
+        }
+
+        /* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Lapisan gelap agar tulisan mudah dibaca */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: -1;
+}
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .menu-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-info {
+            padding: 14px;
+        }
+
+        .menu-info h3 {
+            color: #ffffff;
+            margin: 5px 0 10px;
+        }
+
+        .menu-info p {
+            color: #ffffff;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .harga {
+            color: #d8b56b;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .informasi {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .pemesanan {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .video-section video {
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: #000000;
+
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 15px 22px;
+}
+
+.navbar a:hover {
+    background-color: #d8b56b;
+}
+
+
+
+
+/* =========================
+   GALLERY PAGE
+========================= */
+
+.gallery-header {
+    text-align: center;
+    padding: 130px 20px 60px;
+}
+
+.section-subtitle {
+    font-size: 13px;
+    letter-spacing: 5px;
+    opacity: 0.6;
+    margin-bottom: 12px;
+}
+
+.gallery-header h1 {
+    font-size: 48px;
+    letter-spacing: 8px;
+    margin: 0;
+}
+
+.title-line {
+    width: 70px;
+    height: 1px;
+    background: #c9a96e;
+    margin: 25px auto;
+}
+
+.gallery-description {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+    opacity: 0.75;
+}
+
+
+/* =========================
+   GALLERY CONTAINER
+========================= */
+
+.gallery-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* =========================
+   GALLERY CARD
+========================= */
+.gallery-card {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: #111;
+    animation: galleryFade 0.8s ease forwards;
+}
+
+/* Card terakhir dibuat lebih lebar */
+.gallery-card:last-child {
+    grid-column: 1 / 3;
+    height: 380px;
+}
+
+/* =========================
+   IMAGE
+========================= */
+.gallery-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s ease;
+}
+
+/* Temporary background */
+.character-bg {
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.85)
+        ),
+        url("images/gallery-character.jpg");
+}
+
+.live2d-bg {
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.85)
+        ),
+        url("images/gallery-live2d.jpg");
+}
+
+.wallpaper-bg {
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.85)
+        ),
+        url("images/gallery-wallpaper.jpg");
+}
+
+.music-bg {
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.85)
+        ),
+        url("images/gallery-music.jpg");
+}
+
+.manga-bg {
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.85)
+        ),
+        url("images/gallery-manga.jpg");
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.gallery-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            transparent 25%,
+            rgba(0,0,0,0.9) 100%
+        );
+
+    transition: background 0.4s ease;
+}
+
+
+.gallery-number {
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #c9a96e;
+
+    margin-bottom: 8px;
+}
+
+
+.gallery-overlay h2 {
+    font-size: 30px;
+
+    letter-spacing: 4px;
+
+    margin: 0 0 10px;
+}
+
+
+.gallery-overlay p {
+    max-width: 430px;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    opacity: 0.75;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.explore-button {
+    display: inline-block;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #c9a96e;
+
+    transition: letter-spacing 0.3s ease;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.gallery-card:hover .gallery-image {
+    transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-overlay {
+    background:
+        linear-gradient(
+            transparent 10%,
+            rgba(0,0,0,0.95) 100%
+        );
+}
+
+.gallery-card:hover .explore-button {
+    letter-spacing: 4px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes galleryFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .gallery-header {
+        padding-top: 100px;
+    }
+
+    .gallery-header h1 {
+        font-size: 36px;
+        letter-spacing: 5px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-card:last-child {
+        grid-column: auto;
+    }
+
+    .gallery-card {
+        height: 330px;
+    }
+
+}

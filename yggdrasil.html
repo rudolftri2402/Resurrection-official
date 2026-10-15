@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resurrection — Yggdrasil</title>
+
+    <link rel="stylesheet" href="css/information/yggdrasil.css">
+</head>
+
+<body class="yggdrasil-page">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar">
+    <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+
+        <li>
+            <a href="information.html" class="active">
+                Information
+            </a>
+        </li>
+
+        <li><a href="download.html">Download</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================================================
+     YGGDRASIL MAP
+========================================================= -->
+
+<section class="ygg-map-section">
+
+    <div class="ygg-map-title">
+        <span>INFORMATION / WORLD</span>
+        <h1>YGGDRASIL</h1>
+    </div>
+
+
+    <!-- DRAG AREA -->
+
+    <div class="ygg-map-viewport" id="yggMapViewport">
+
+        <div class="ygg-map" id="yggMap">
+
+
+            <!-- WORLD MAP IMAGE -->
+
+            <img
+                src="information/yggrasil/yggdrasil.png"
+                class="ygg-map-image"
+                alt="Yggdrasil World Map"
+            >
+
+
+            <!-- DECORATIVE LINES -->
+
+            <div class="ygg-orbit orbit-01"></div>
+            <div class="ygg-orbit orbit-02"></div>
+            <div class="ygg-orbit orbit-03"></div>
+
+
+            <!-- =================================================
+                 REALMS
+            ================================================= -->
+
+
+            <!-- ASGARD -->
+
+            <button
+                class="ygg-location active"
+                data-location="asgard"
+                style="left: 50%; top: 18%;"
+            >
+
+                <span class="ygg-location-icon">
+                    ✦
+                </span>
+
+                <span class="ygg-location-name">
+                    ASGARD
+                </span>
+
+            </button>
+
+
+
+            <!-- VANAHEIM -->
+
+            <button
+                class="ygg-location"
+                data-location="vanaheim"
+                style="left: 31%; top: 32%;"
+            >
+
+                <span class="ygg-location-icon">
+                    ✦
+                </span>
+
+                <span class="ygg-location-name">
+                    VANAHEIM
+                </span>
+
+            </button>
+
+
+
+            <!-- ALFHEIM -->
+
+            <button
+                class="ygg-location"
+                data-location="alfheim"
+                style="left: 69%; top: 32%;"
+            >
+
+                <span class="ygg-location-icon">
+                    ✦
+                </span>
+
+                <span class="ygg-location-name">
+                    ALFHEIM
+                </span>
+
+            </button>
+
+
+
+            <!-- MIDGARD -->
+
+            <button
+                class="ygg-location"
+                data-location="midgard"
+                style="left: 50%; top: 43%;"
+            >
+
+                <span class="ygg-location-icon">
+                    ✦
+                </span>
+
+                <span class="ygg-location-name">
+                    MIDGARD
+                </span>
+
+            </button>
+
+
+
+            <!-- JOTUNHEIM -->
+
+            <button
+                class="ygg-location"
+                data-location="jotunheim"
+                style="left: 23%; top: 56%;"
+            >
+
+                <span class="ygg-location-icon">
+                    ✦
+                </span>
+
+                <span class="ygg-location-name">
+                    JÖTUNHEIM
+                </span>
+
+            </button>
+
+
+
+            <!-- SVARTALFHEIM -->
+
+            <button
+                class="ygg-location"
+                data-location="svartalfheim"
+                style="left: 39%; top: 64%;"
+            >
+
+                <span class="ygg-location-icon">
+                    ✦
+                </span>
+
+                <span class="ygg-location-name">
+                    SVARTALFHEIM
+                </span>
+
+            </button>
+
+
+
+            <!-- NIFLHEIM -->
+
+            <button
+                class="ygg-location"
+                data-location="niflheim"
+                style="left: 68%; top: 65%;"
+            >
+
+                <span class="ygg-location-icon">
+                    ✦
+                </span>
+
+                <span class="ygg-location-name">
+                    NIFLHEIM
+                </span>
+
+            </button>
+
+
+
+            <!-- MUSPELHEIM -->
+
+            <button
+                class="ygg-location"
+                data-location="muspelheim"
+                style="left: 50%; top: 80%;"
+            >
+
+                <span class="ygg-location-icon">
+                    ✦
+                </span>
+
+                <span class="ygg-location-name">
+                    MUSPELHEIM
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MAP HINT -->
+
+    <div class="ygg-map-hint">
+        <span>DRAG TO EXPLORE</span>
+        <span class="ygg-hint-divider">•</span>
+        <span>SELECT A REALM</span>
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WORLD DETAIL
+========================================================= -->
+
+<section class="ygg-detail-section">
+
+    <button
+        class="ygg-detail-arrow ygg-detail-prev"
+        id="yggPrev"
+        aria-label="Previous realm"
+    >
+        ‹
+    </button>
+
+
+    <div class="ygg-detail-content">
+
+
+        <!-- IMAGE -->
+
+        <div class="ygg-detail-image-wrapper">
+
+            <img
+                id="yggDetailImage"
+                src="images/yggdrasil/asgard.jpg"
+                alt="Asgard"
+                class="ygg-detail-image"
+            >
+
+        </div>
+
+
+
+        <!-- TEXT -->
+
+        <div class="ygg-detail-info">
+
+            <span
+                class="ygg-detail-label"
+                id="yggDetailLabel"
+            >
+                REALM 01
+            </span>
+
+            <h2 id="yggDetailTitle">
+                ASGARD
+            </h2>
+
+            <div class="ygg-detail-line"></div>
+
+            <p id="yggDetailDescription">
+                The heavenly realm above the branches of Yggdrasil.
+                Asgard is the realm of the angels and the place
+                closest to the presence of the Creator.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <button
+        class="ygg-detail-arrow ygg-detail-next"
+        id="yggNext"
+        aria-label="Next realm"
+    >
+        ›
+    </button>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        <span>蘇生</span>
+        <strong>RESURRECTION</strong>
+    </div>
+
+    <p>
+        © 2026 Resurrection. All rights reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+const locations = {
+
+    asgard: {
+        title: "ASGARD",
+        label: "REALM 01",
+        image: "images/yggdrasil/asgard.jpg",
+        description:
+            "The heavenly realm above the branches of Yggdrasil. Asgard is the realm of the angels and the place closest to the presence of the Creator."
+    },
+
+    vanaheim: {
+        title: "VANAHEIM",
+        label: "REALM 02",
+        image: "images/yggdrasil/vanaheim.jpg",
+        description:
+            "A realm deeply connected to nature and the stars. Its inhabitants play an important role in maintaining the balance of Yggdrasil."
+    },
+
+    midgard: {
+        title: "MIDGARD",
+        label: "REALM 03",
+        image: "images/yggdrasil/midgard.jpg",
+        description:
+            "The realm of humanity. Midgard stands between the greater realms of Yggdrasil and is watched over by Ymir."
+    },
+
+    jotunheim: {
+        title: "JÖTUNHEIM",
+        label: "REALM 04",
+        image: "images/yggdrasil/jotunheim.jpg",
+        description:
+            "A vast and mysterious realm associated with giants and ancient forces. Much of its history remains unknown."
+    },
+
+    svartalfheim: {
+        title: "SVARTALFHEIM",
+        label: "REALM 05",
+        image: "images/yggdrasil/svartalfheim.jpg",
+        description:
+            "The realm of the dwarves and master craftsmen. Deep beneath the earth lie the great forges of Nidavellir."
+    },
+
+    alfheim: {
+        title: "ALFHEIM",
+        label: "REALM 06",
+        image: "images/yggdrasil/alfheim.jpg",
+        description:
+            "A realm inhabited by elves of light and darkness. A long-standing conflict divides the two sides."
+    },
+
+    niflheim: {
+        title: "NIFLHEIM",
+        label: "REALM 07",
+        image: "images/yggdrasil/niflheim.jpg",
+        description:
+            "A frozen realm of death and silence. Its icy lands are guarded by the ancient ice dragon Caligulla."
+    },
+
+    muspelheim: {
+        title: "MUSPELHEIM",
+        label: "REALM 08",
+        image: "images/yggdrasil/muspelheim.jpg",
+        description:
+            "An infernal realm consumed by fire. Muspelheim absorbs corrupted and impure energy from across the world."
+    }
+
+};
+
+
+
+/* =========================================================
+   LOCATION ELEMENTS
+========================================================= */
+
+const locationButtons =
+    document.querySelectorAll(".ygg-location");
+
+const detailImage =
+    document.getElementById("yggDetailImage");
+
+const detailTitle =
+    document.getElementById("yggDetailTitle");
+
+const detailLabel =
+    document.getElementById("yggDetailLabel");
+
+const detailDescription =
+    document.getElementById("yggDetailDescription");
+
+const locationKeys =
+    Object.keys(locations);
+
+let currentIndex = 0;
+
+
+
+/* =========================================================
+   SHOW LOCATION
+========================================================= */
+
+function showLocation(key) {
+
+    const data = locations[key];
+
+    if (!data) return;
+
+
+    detailImage.classList.add("changing");
+
+    setTimeout(() => {
+
+        detailImage.src = data.image;
+        detailImage.alt = data.title;
+
+        detailTitle.textContent =
+            data.title;
+
+        detailLabel.textContent =
+            data.label;
+
+        detailDescription.textContent =
+            data.description;
+
+        detailImage.classList.remove("changing");
+
+    }, 200);
+
+
+    locationButtons.forEach(button => {
+
+        button.classList.remove("active");
+
+        if (
+            button.dataset.location === key
+        ) {
+            button.classList.add("active");
+        }
+
+    });
+
+
+    currentIndex =
+        locationKeys.indexOf(key);
+
+}
+
+
+
+/* =========================================================
+   LOCATION CLICK
+========================================================= */
+
+locationButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        showLocation(
+            button.dataset.location
+        );
+
+    });
+
+});
+
+
+
+/* =========================================================
+   PREVIOUS
+========================================================= */
+
+document
+    .getElementById("yggPrev")
+    .addEventListener("click", () => {
+
+        currentIndex--;
+
+        if (currentIndex < 0) {
+            currentIndex =
+                locationKeys.length - 1;
+        }
+
+        showLocation(
+            locationKeys[currentIndex]
+        );
+
+    });
+
+
+
+/* =========================================================
+   NEXT
+========================================================= */
+
+document
+    .getElementById("yggNext")
+    .addEventListener("click", () => {
+
+        currentIndex++;
+
+        if (
+            currentIndex >=
+            locationKeys.length
+        ) {
+            currentIndex = 0;
+        }
+
+        showLocation(
+            locationKeys[currentIndex]
+        );
+
+    });
+
+
+
+/* =========================================================
+   DRAG MAP
+========================================================= */
+
+const viewport =
+    document.getElementById(
+        "yggMapViewport"
+    );
+
+const map =
+    document.getElementById("yggMap");
+
+let isDragging = false;
+
+let startX = 0;
+let startY = 0;
+
+let translateX = 0;
+let translateY = 0;
+
+
+
+viewport.addEventListener(
+    "pointerdown",
+    (event) => {
+
+        isDragging = true;
+
+        startX =
+            event.clientX - translateX;
+
+        startY =
+            event.clientY - translateY;
+
+        viewport.setPointerCapture(
+            event.pointerId
+        );
+
+        map.classList.add("dragging");
+
+    }
+);
+
+
+
+viewport.addEventListener(
+    "pointermove",
+    (event) => {
+
+        if (!isDragging) return;
+
+        translateX =
+            event.clientX - startX;
+
+        translateY =
+            event.clientY - startY;
+
+        map.style.transform =
+            `translate(${translateX}px, ${translateY}px)`;
+
+    }
+);
+
+
+
+viewport.addEventListener(
+    "pointerup",
+    () => {
+
+        isDragging = false;
+
+        map.classList.remove(
+            "dragging"
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Live2D | Resurrection</title>
+
+    <link rel="stylesheet"
+          href="css/gallery/live2d.css">
+
+</head>
+
+
+<body class="live2d-page">
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="news.html">
+                    News
+                </a>
+            </li>
+
+            <li>
+                <a href="gallery.html"
+                   class="active">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="information.html">
+                    Information
+                </a>
+            </li>
+
+            <li>
+                <a href="download.html">
+                    Download
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================== -->
+
+    <header class="live2d-header">
+
+        <div>
+
+            <span>
+                GALLERY / LIVE2D
+            </span>
+
+            <h1>
+                LIVE2D
+            </h1>
+
+        </div>
+
+
+        <p>
+
+            Characters brought to life
+            through motion and expression.
+
+        </p>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN LIVE2D AREA
+    ========================== -->
+
+    <main class="live2d-container">
+
+
+        <!-- CHARACTER NAVIGATION -->
+
+        <aside class="live2d-sidebar">
+
+            <div class="live2d-sidebar-title">
+
+                CHARACTER
+
+            </div>
+
+
+            <button
+                class="live2d-character active"
+                data-character="sera">
+
+                <span>01</span>
+
+                <strong>
+                    SERA
+                </strong>
+
+                <small>
+                    MAIN CHARACTER
+                </small>
+
+            </button>
+
+
+            <button
+                class="live2d-character"
+                data-character="haruna">
+
+                <span>02</span>
+
+                <strong>
+                    HARUNA
+                </strong>
+
+                <small>
+                    SUPPORT
+                </small>
+
+            </button>
+
+
+            <button
+                class="live2d-character"
+                data-character="ishtar">
+
+                <span>03</span>
+
+                <strong>
+                    ISHTAR
+                </strong>
+
+                <small>
+                    PROTECTOR
+                </small>
+
+            </button>
+
+
+            <button
+                class="live2d-character"
+                data-character="lilyth">
+
+                <span>04</span>
+
+                <strong>
+                    LILYTH
+                </strong>
+
+                <small>
+                    DEMON
+                </small>
+
+            </button>
+
+
+        </aside>
+
+
+
+        <!-- =========================
+             LIVE2D PREVIEW
+        ========================== -->
+
+        <section class="live2d-preview">
+
+
+            <!-- Background -->
+
+            <div
+                class="live2d-background"
+                id="live2dBackground">
+            </div>
+
+
+
+            <!-- Character Placeholder -->
+
+            <div
+                class="live2d-model"
+                id="live2dModel">
+
+
+                <div class="live2d-frame">
+
+                    <span class="frame-corner top-left"></span>
+
+                    <span class="frame-corner top-right"></span>
+
+                    <span class="frame-corner bottom-left"></span>
+
+                    <span class="frame-corner bottom-right"></span>
+
+
+                    <div class="model-placeholder">
+
+                        <span>
+                            LIVE2D
+                        </span>
+
+                        <strong id="previewCharacter">
+                            SERA
+                        </strong>
+
+                        <small>
+                            MODEL PREVIEW
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Preview label -->
+
+            <div class="live2d-preview-label">
+
+                <span>
+                    LIVE2D MODEL
+                </span>
+
+                <strong id="previewStatus">
+                    NORMAL
+                </strong>
+
+            </div>
+
+
+
+            <!-- Character Name -->
+
+            <div class="live2d-name">
+
+                <span id="live2dNumber">
+                    01
+                </span>
+
+                <h2 id="live2dName">
+                    SERA
+                </h2>
+
+                <p id="live2dTitle">
+                    THE GIRL WHO AWAKENED
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             INFORMATION
+        ========================== -->
+
+        <aside class="live2d-information">
+
+
+            <span class="info-label">
+                CHARACTER
+            </span>
+
+            <h2 id="infoName">
+                SERA
+            </h2>
+
+
+            <div class="info-line"></div>
+
+
+            <div class="info-item">
+
+                <span>
+                    MODEL
+                </span>
+
+                <strong id="infoModel">
+                    NORMAL
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    OUTFIT
+                </span>
+
+                <strong id="infoOutfit">
+                    VILLAGE
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    EXPRESSION
+                </span>
+
+                <strong>
+                    AVAILABLE
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    MOTION
+                </span>
+
+                <strong>
+                    AVAILABLE
+                </strong>
+
+            </div>
+
+
+
+            <!-- Expressions -->
+
+            <div class="expression-section">
+
+                <span class="info-label">
+                    EXPRESSIONS
+                </span>
+
+
+                <div class="expression-list">
+
+                    <button>
+                        NORMAL
+                    </button>
+
+                    <button>
+                        SMILE
+                    </button>
+
+                    <button>
+                        SAD
+                    </button>
+
+                    <button>
+                        ANGRY
+                    </button>
+
+                    <button>
+                        SURPRISED
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+    </main>
+
+
+
+    <!-- =========================
+         CHARACTER CAROUSEL
+    ========================== -->
+
+    <section class="live2d-carousel">
+
+
+        <button
+            class="live2d-arrow"
+            id="live2dPrev">
+
+            ‹
+
+        </button>
+
+
+        <div class="live2d-cards">
+
+
+            <button
+                class="live2d-card active"
+                data-character="sera">
+
+                <img
+                    src="images/live2d/sera.jpg"
+                    alt="Sera">
+
+                <div>
+
+                    <span>
+                        01
+                    </span>
+
+                    <strong>
+                        SERA
+                    </strong>
+
+                </div>
+
+            </button>
+
+
+            <button
+                class="live2d-card"
+                data-character="haruna">
+
+                <img
+                    src="images/live2d/haruna.jpg"
+                    alt="Haruna">
+
+                <div>
+
+                    <span>
+                        02
+                    </span>
+
+                    <strong>
+                        HARUNA
+                    </strong>
+
+                </div>
+
+            </button>
+
+
+            <button
+                class="live2d-card"
+                data-character="ishtar">
+
+                <img
+                    src="images/live2d/ishtar.jpg"
+                    alt="Ishtar">
+
+                <div>
+
+                    <span>
+                        03
+                    </span>
+
+                    <strong>
+                        ISHTAR
+                    </strong>
+
+                </div>
+
+            </button>
+
+
+            <button
+                class="live2d-card"
+                data-character="lilyth">
+
+                <img
+                    src="images/live2d/lilyth.jpg"
+                    alt="Lilyth">
+
+                <div>
+
+                    <span>
+                        04
+                    </span>
+
+                    <strong>
+                        LILYTH
+                    </strong>
+
+                </div>
+
+            </button>
+
+
+        </div>
+
+
+        <button
+            class="live2d-arrow"
+            id="live2dNext">
+
+            ›
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const live2dCharacters = {
+
+            sera: {
+
+                number: "01",
+
+                name: "SERA",
+
+                title:
+                    "THE GIRL WHO AWAKENED",
+
+                model:
+                    "NORMAL",
+
+                outfit:
+                    "VILLAGE",
+
+                background:
+                    "images/live2d/sera-bg.jpg"
+
+            },
+
+
+            haruna: {
+
+                number: "02",
+
+                name: "HARUNA",
+
+                title:
+                    "THE GENTLE BLESSING",
+
+                model:
+                    "NORMAL",
+
+                outfit:
+                    "PRIESTESS",
+
+                background:
+                    "images/live2d/haruna-bg.jpg"
+
+            },
+
+
+            ishtar: {
+
+                number: "03",
+
+                name: "ISHTAR",
+
+                title:
+                    "THE VILLAGE PROTECTOR",
+
+                model:
+                    "NORMAL",
+
+                outfit:
+                    "VILLAGE",
+
+                background:
+                    "images/live2d/ishtar-bg.jpg"
+
+            },
+
+
+            lilyth: {
+
+                number: "04",
+
+                name: "LILYTH",
+
+                title:
+                    "THE DEMON OF DESIRE",
+
+                model:
+                    "NORMAL",
+
+                outfit:
+                    "DEMON",
+
+                background:
+                    "images/live2d/lilyth-bg.jpg"
+
+            }
+
+        };
+
+
+
+        const previewCharacter =
+            document.getElementById(
+                "previewCharacter"
+            );
+
+
+        const previewStatus =
+            document.getElementById(
+                "previewStatus"
+            );
+
+
+        const live2dNumber =
+            document.getElementById(
+                "live2dNumber"
+            );
+
+
+        const live2dName =
+            document.getElementById(
+                "live2dName"
+            );
+
+
+        const live2dTitle =
+            document.getElementById(
+                "live2dTitle"
+            );
+
+
+        const infoName =
+            document.getElementById(
+                "infoName"
+            );
+
+
+        const infoModel =
+            document.getElementById(
+                "infoModel"
+            );
+
+
+        const infoOutfit =
+            document.getElementById(
+                "infoOutfit"
+            );
+
+
+        const background =
+            document.getElementById(
+                "live2dBackground"
+            );
+
+
+        const preview =
+            document.querySelector(
+                ".live2d-preview"
+            );
+
+
+
+        function changeLive2D(id) {
+
+            const character =
+                live2dCharacters[id];
+
+            if (!character) {
+                return;
+            }
+
+
+            preview.classList.add(
+                "live2d-changing"
+            );
+
+
+            setTimeout(() => {
+
+                previewCharacter.textContent =
+                    character.name;
+
+                previewStatus.textContent =
+                    character.model;
+
+                live2dNumber.textContent =
+                    character.number;
+
+                live2dName.textContent =
+                    character.name;
+
+                live2dTitle.textContent =
+                    character.title;
+
+                infoName.textContent =
+                    character.name;
+
+                infoModel.textContent =
+                    character.model;
+
+                infoOutfit.textContent =
+                    character.outfit;
+
+
+                background.style.backgroundImage =
+                    `url("${character.background}")`;
+
+
+                document
+                    .querySelectorAll(
+                        ".live2d-character"
+                    )
+                    .forEach(button => {
+
+                        button.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                document
+                    .querySelectorAll(
+                        ".live2d-card"
+                    )
+                    .forEach(card => {
+
+                        card.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                document
+                    .querySelectorAll(
+                        `[data-character="${id}"]`
+                    )
+                    .forEach(element => {
+
+                        element.classList.add(
+                            "active"
+                        );
+
+                    });
+
+
+                preview.classList.remove(
+                    "live2d-changing"
+                );
+
+
+            }, 250);
+
+        }
+
+
+
+        /* Sidebar */
+
+        document
+            .querySelectorAll(
+                ".live2d-character"
+            )
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        changeLive2D(
+                            button.dataset.character
+                        );
+
+                    }
+                );
+
+            });
+
+
+
+        /* Cards */
+
+        document
+            .querySelectorAll(
+                ".live2d-card"
+            )
+            .forEach(card => {
+
+                card.addEventListener(
+                    "click",
+                    () => {
+
+                        changeLive2D(
+                            card.dataset.character
+                        );
+
+                    }
+                );
+
+            });
+
+
+
+        /* Previous / Next */
+
+        const ids =
+            Object.keys(
+                live2dCharacters
+            );
+
+        let currentIndex = 0;
+
+
+        function updateIndex(id) {
+
+            currentIndex =
+                ids.indexOf(id);
+
+        }
+
+
+        document
+            .getElementById(
+                "live2dNext"
+            )
+            .addEventListener(
+                "click",
+                () => {
+
+                    currentIndex =
+                        (currentIndex + 1)
+                        % ids.length;
+
+                    changeLive2D(
+                        ids[currentIndex]
+                    );
+
+                }
+            );
+
+
+        document
+            .getElementById(
+                "live2dPrev"
+            )
+            .addEventListener(
+                "click",
+                () => {
+
+                    currentIndex =
+                        (currentIndex - 1 + ids.length)
+                        % ids.length;
+
+                    changeLive2D(
+                        ids[currentIndex]
+                    );
+
+                }
+            );
+
+
+
+        /* Initial background */
+
+        background.style.backgroundImage =
+            `url("${live2dCharacters.sera.background}")`;
+
+    </script>
+</body>
+</html>

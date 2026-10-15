@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Resurrection — Elemental System</title>
+
+    <link
+        rel="stylesheet"
+        href="css/information/elemental.css"
+    >
+
+</head>
+
+
+<body class="elemental-page">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar">
+
+    <ul class="nav-menu">
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="news.html">
+                News
+            </a>
+        </li>
+
+        <li>
+            <a href="gallery.html">
+                Gallery
+            </a>
+        </li>
+
+        <li>
+            <a
+                href="information.html"
+                class="active"
+            >
+                Information
+            </a>
+        </li>
+
+        <li>
+            <a href="download.html">
+                Download
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="elemental-header">
+
+    <span>
+        INFORMATION / SYSTEM
+    </span>
+
+    <h1>
+        ELEMENTAL SYSTEM
+    </h1>
+
+    <p>
+        Seven fundamental elements that shape the world
+        and its powers.
+    </p>
+
+</header>
+
+
+
+<!-- =========================================================
+     ELEMENT SELECTOR
+========================================================= -->
+
+<section class="elemental-selector-section">
+
+
+    <div class="elemental-selector">
+
+
+        <!-- FIRE -->
+
+        <button
+            class="element-card fire active"
+            data-element="fire"
+        >
+
+            <span class="element-symbol">
+                🔥
+            </span>
+
+            <span class="element-name">
+                FIRE
+            </span>
+
+            <span class="element-kanji">
+                HO
+            </span>
+
+        </button>
+
+
+
+        <!-- WATER -->
+
+        <button
+            class="element-card water"
+            data-element="water"
+        >
+
+            <span class="element-symbol">
+                💧
+            </span>
+
+            <span class="element-name">
+                WATER
+            </span>
+
+            <span class="element-kanji">
+                MI
+            </span>
+
+        </button>
+
+
+
+        <!-- WIND -->
+
+        <button
+            class="element-card wind"
+            data-element="wind"
+        >
+
+            <span class="element-symbol">
+                〰
+            </span>
+
+            <span class="element-name">
+                WIND
+            </span>
+
+            <span class="element-kanji">
+                KA
+            </span>
+
+        </button>
+
+
+
+        <!-- EARTH -->
+
+        <button
+            class="element-card earth"
+            data-element="earth"
+        >
+
+            <span class="element-symbol">
+                ◆
+            </span>
+
+            <span class="element-name">
+                EARTH
+            </span>
+
+            <span class="element-kanji">
+                CHI
+            </span>
+
+        </button>
+
+
+
+        <!-- DARKNESS -->
+
+        <button
+            class="element-card darkness"
+            data-element="darkness"
+        >
+
+            <span class="element-symbol">
+                ◐
+            </span>
+
+            <span class="element-name">
+                DARKNESS
+            </span>
+
+            <span class="element-kanji">
+                YA
+            </span>
+
+        </button>
+
+
+
+        <!-- LIGHT -->
+
+        <button
+            class="element-card light"
+            data-element="light"
+        >
+
+            <span class="element-symbol">
+                ✦
+            </span>
+
+            <span class="element-name">
+                LIGHT
+            </span>
+
+            <span class="element-kanji">
+                HI
+            </span>
+
+        </button>
+
+
+
+        <!-- SOUND -->
+
+        <button
+            class="element-card sound"
+            data-element="sound"
+        >
+
+            <span class="element-symbol">
+                ))) 
+            </span>
+
+            <span class="element-name">
+                SOUND
+            </span>
+
+            <span class="element-kanji">
+                KO
+            </span>
+
+        </button>
+
+
+    </div>
+
+
+
+    <div class="elemental-selector-hint">
+
+        SELECT AN ELEMENT
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ELEMENT DETAIL
+========================================================= -->
+
+<section class="elemental-detail-section">
+
+
+    <div class="elemental-detail">
+
+
+        <!-- LEFT -->
+
+        <div class="elemental-detail-visual">
+
+            <div
+                class="elemental-detail-symbol"
+                id="elementSymbol"
+            >
+                🔥
+            </div>
+
+            <span
+                id="elementNumber"
+                class="elemental-detail-number"
+            >
+                ELEMENT 01
+            </span>
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <div class="elemental-detail-info">
+
+            <span
+                id="elementLabel"
+                class="elemental-detail-label"
+            >
+                ELEMENT OF CREATION
+            </span>
+
+
+            <h2 id="elementTitle">
+                FIRE
+            </h2>
+
+
+            <div class="elemental-line"></div>
+
+
+            <p id="elementDescription">
+
+                Fire represents heat, destruction,
+                passion, and the force that transforms
+                one form into another.
+
+            </p>
+
+
+            <div class="elemental-properties">
+
+
+                <div class="element-property">
+
+                    <span>
+                        ATTRIBUTE
+                    </span>
+
+                    <strong id="elementAttribute">
+                        HO
+                    </strong>
+
+                </div>
+
+
+                <div class="element-property">
+
+                    <span>
+                        NATURE
+                    </span>
+
+                    <strong id="elementNature">
+                        OFFENSIVE
+                    </strong>
+
+                </div>
+
+
+                <div class="element-property">
+
+                    <span>
+                        DOMAIN
+                    </span>
+
+                    <strong id="elementDomain">
+                        FLAME
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ELEMENTAL PRINCIPLE
+========================================================= -->
+
+<section class="elemental-principle">
+
+    <span>
+        THE SEVEN ELEMENTS
+    </span>
+
+    <h2>
+        THE FOUNDATION OF POWER
+    </h2>
+
+    <p>
+        Every living being possesses an affinity toward
+        one or more elements. These elements influence
+        magic, abilities, creatures, environments,
+        and the balance of Yggdrasil.
+    </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+
+        <span>
+            蘇生
+        </span>
+
+        <strong>
+            RESURRECTION
+        </strong>
+
+    </div>
+
+
+    <p>
+        © 2026 Resurrection. All rights reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+const elements = {
+
+    fire: {
+
+        number: "ELEMENT 01",
+
+        symbol: "🔥",
+
+        title: "FIRE",
+
+        label: "ELEMENT OF CREATION",
+
+        attribute: "HO",
+
+        nature: "OFFENSIVE",
+
+        domain: "FLAME",
+
+        description:
+            "Fire represents heat, destruction, passion, and the force that transforms one form into another."
+
+    },
+
+
+    water: {
+
+        number: "ELEMENT 02",
+
+        symbol: "💧",
+
+        title: "WATER",
+
+        label: "ELEMENT OF FLOW",
+
+        attribute: "MI",
+
+        nature: "ADAPTIVE",
+
+        domain: "TIDE",
+
+        description:
+            "Water represents life, movement, adaptability, and the endless cycle of change."
+
+    },
+
+
+    wind: {
+
+        number: "ELEMENT 03",
+
+        symbol: "〰",
+
+        title: "WIND",
+
+        label: "ELEMENT OF FREEDOM",
+
+        attribute: "KA",
+
+        nature: "MOBILE",
+
+        domain: "GALE",
+
+        description:
+            "Wind represents freedom, movement, speed, and the invisible force that crosses every boundary."
+
+    },
+
+
+    earth: {
+
+        number: "ELEMENT 04",
+
+        symbol: "◆",
+
+        title: "EARTH",
+
+        label: "ELEMENT OF FOUNDATION",
+
+        attribute: "CHI",
+
+        nature: "DEFENSIVE",
+
+        domain: "STONE",
+
+        description:
+            "Earth represents stability, endurance, protection, and the foundation upon which life is built."
+
+    },
+
+
+    darkness: {
+
+        number: "ELEMENT 05",
+
+        symbol: "◐",
+
+        title: "DARKNESS",
+
+        label: "ELEMENT OF THE UNKNOWN",
+
+        attribute: "YA",
+
+        nature: "CORRUPTIVE",
+
+        domain: "VOID",
+
+        description:
+            "Darkness represents the unknown, silence, hidden desires, and forces that exist beyond ordinary perception."
+
+    },
+
+
+    light: {
+
+        number: "ELEMENT 06",
+
+        symbol: "✦",
+
+        title: "LIGHT",
+
+        label: "ELEMENT OF REVELATION",
+
+        attribute: "HI",
+
+        nature: "PURIFYING",
+
+        domain: "RADIANCE",
+
+        description:
+            "Light represents revelation, purity, hope, and the power to illuminate what has been hidden."
+
+    },
+
+
+    sound: {
+
+        number: "ELEMENT 07",
+
+        symbol: ")))",
+
+        title: "SOUND",
+
+        label: "ELEMENT OF RESONANCE",
+
+        attribute: "KO",
+
+        nature: "RESONANT",
+
+        domain: "VIBRATION",
+
+        description:
+            "Sound represents vibration, resonance, communication, and the invisible force carried through the world."
+
+    }
+
+};
+
+
+
+/* =========================================================
+   ELEMENT DOM
+========================================================= */
+
+const elementCards =
+    document.querySelectorAll(
+        ".element-card"
+    );
+
+
+const elementSymbol =
+    document.getElementById(
+        "elementSymbol"
+    );
+
+
+const elementNumber =
+    document.getElementById(
+        "elementNumber"
+    );
+
+
+const elementTitle =
+    document.getElementById(
+        "elementTitle"
+    );
+
+
+const elementLabel =
+    document.getElementById(
+        "elementLabel"
+    );
+
+
+const elementDescription =
+    document.getElementById(
+        "elementDescription"
+    );
+
+
+const elementAttribute =
+    document.getElementById(
+        "elementAttribute"
+    );
+
+
+const elementNature =
+    document.getElementById(
+        "elementNature"
+    );
+
+
+const elementDomain =
+    document.getElementById(
+        "elementDomain"
+    );
+
+
+
+/* =========================================================
+   CHANGE ELEMENT
+========================================================= */
+
+function showElement(key) {
+
+    const data =
+        elements[key];
+
+    if (!data) return;
+
+
+    elementCards.forEach(card => {
+
+        card.classList.remove(
+            "active"
+        );
+
+    });
+
+
+    const selectedCard =
+        document.querySelector(
+            `[data-element="${key}"]`
+        );
+
+
+    if (selectedCard) {
+
+        selectedCard.classList.add(
+            "active"
+        );
+
+    }
+
+
+    const detail =
+        document.querySelector(
+            ".elemental-detail"
+        );
+
+
+    detail.classList.add(
+        "changing"
+    );
+
+
+    setTimeout(() => {
+
+        elementSymbol.textContent =
+            data.symbol;
+
+        elementNumber.textContent =
+            data.number;
+
+        elementTitle.textContent =
+            data.title;
+
+        elementLabel.textContent =
+            data.label;
+
+        elementDescription.textContent =
+            data.description;
+
+        elementAttribute.textContent =
+            data.attribute;
+
+        elementNature.textContent =
+            data.nature;
+
+        elementDomain.textContent =
+            data.domain;
+
+
+        detail.classList.remove(
+            "changing"
+        );
+
+    }, 180);
+
+}
+
+
+
+/* =========================================================
+   CLICK
+========================================================= */
+
+elementCards.forEach(card => {
+
+    card.addEventListener(
+        "click",
+        () => {
+
+            showElement(
+                card.dataset.element
+            );
+
+        }
+    );
+
+});
+
+</script>
+
+
+</body>
+
+</html>

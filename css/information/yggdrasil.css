@@ -1,0 +1,800 @@
+        body {
+            margin: 100;
+            padding-top: 55px;
+            font-family: Georgia, serif;
+        }
+
+        /* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Lapisan gelap agar tulisan mudah dibaca */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: -1;
+}
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .menu-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-info {
+            padding: 14px;
+        }
+
+        .menu-info h3 {
+            color: #ffffff;
+            margin: 5px 0 10px;
+        }
+
+        .menu-info p {
+            color: #ffffff;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .harga {
+            color: #d8b56b;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .informasi {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .pemesanan {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .video-section video {
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: #000000;
+
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 15px 22px;
+}
+
+.navbar a:hover {
+    background-color: #d8b56b;
+}
+
+
+
+
+
+/* =========================================================
+   YGGDRASIL PAGE
+========================================================= */
+
+.yggdrasil-page {
+    background: #050505;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   MAP SECTION
+========================================================= */
+
+.ygg-map-section {
+    position: relative;
+
+    height: 820px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201, 169, 110, 0.05),
+            transparent 55%
+        ),
+        #050505;
+}
+
+
+/* =========================================================
+   MAP TITLE
+========================================================= */
+
+.ygg-map-title {
+    position: absolute;
+
+    z-index: 20;
+
+    top: 45px;
+    left: 55px;
+
+    pointer-events: none;
+}
+
+
+.ygg-map-title span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #c9a96e;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+
+.ygg-map-title h1 {
+    margin: 0;
+
+    font-size: 36px;
+
+    font-weight: 400;
+
+    letter-spacing: 8px;
+}
+
+
+
+/* =========================================================
+   MAP VIEWPORT
+========================================================= */
+
+.ygg-map-viewport {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    cursor: grab;
+}
+
+
+.ygg-map-viewport:active {
+    cursor: grabbing;
+}
+
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.ygg-map {
+    position: absolute;
+
+    width: 1800px;
+    height: 1000px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    transition:
+        transform 0.08s linear;
+
+    user-select: none;
+}
+
+
+.ygg-map.dragging {
+    transition: none;
+}
+
+
+
+/* =========================================================
+   MAP IMAGE
+========================================================= */
+
+.ygg-map-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    pointer-events: none;
+
+    opacity: 0.78;
+
+    filter:
+        brightness(0.7)
+        contrast(1.1)
+        saturate(0.8);
+}
+
+
+
+/* =========================================================
+   DECORATIVE ORBITS
+========================================================= */
+
+.ygg-orbit {
+    position: absolute;
+
+    border: 1px solid
+        rgba(201, 169, 110, 0.25);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.orbit-01 {
+    width: 650px;
+    height: 650px;
+
+    left: 28%;
+    top: 8%;
+}
+
+
+.orbit-02 {
+    width: 950px;
+    height: 950px;
+
+    left: 12%;
+    top: -10%;
+}
+
+
+.orbit-03 {
+    width: 430px;
+    height: 430px;
+
+    left: 50%;
+    top: 30%;
+}
+
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.ygg-location {
+    position: absolute;
+
+    z-index: 10;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+.ygg-location-icon {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid
+        rgba(201, 169, 110, 0.65);
+
+    border-radius: 50%;
+
+    background:
+        rgba(5, 5, 5, 0.75);
+
+    color: #c9a96e;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(201, 169, 110, 0.04),
+
+        0 0 25px
+        rgba(201, 169, 110, 0.15);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.ygg-location-name {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+
+    color: #aaa;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.ygg-location:hover
+.ygg-location-icon,
+.ygg-location.active
+.ygg-location-icon {
+
+    transform: scale(1.18);
+
+    background:
+        rgba(201, 169, 110, 0.12);
+
+    box-shadow:
+        0 0 0 8px
+        rgba(201, 169, 110, 0.04),
+
+        0 0 35px
+        rgba(201, 169, 110, 0.35);
+}
+
+
+.ygg-location:hover
+.ygg-location-name,
+.ygg-location.active
+.ygg-location-name {
+
+    color: #ffffff;
+}
+
+
+
+/* =========================================================
+   MAP HINT
+========================================================= */
+
+.ygg-map-hint {
+    position: absolute;
+
+    z-index: 20;
+
+    left: 50%;
+    bottom: 35px;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    gap: 15px;
+
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    pointer-events: none;
+}
+
+
+.ygg-hint-divider {
+    color: #c9a96e;
+}
+
+
+
+/* =========================================================
+   DETAIL SECTION
+========================================================= */
+
+.ygg-detail-section {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 620px;
+
+    padding: 100px 8%;
+
+    background: #050505;
+
+    border-top:
+        1px solid
+        rgba(201, 169, 110, 0.15);
+}
+
+
+.ygg-detail-content {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+
+/* =========================================================
+   DETAIL IMAGE
+========================================================= */
+
+.ygg-detail-image-wrapper {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #0d0d0d;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.5);
+}
+
+
+.ygg-detail-image {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.6s ease;
+}
+
+
+.ygg-detail-image:hover {
+    transform: scale(1.025);
+}
+
+
+.ygg-detail-image.changing {
+    opacity: 0;
+}
+
+
+
+/* =========================================================
+   DETAIL INFO
+========================================================= */
+
+.ygg-detail-info {
+    max-width: 500px;
+}
+
+
+.ygg-detail-label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #c9a96e;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+
+.ygg-detail-info h2 {
+    margin: 0;
+
+    font-size: 44px;
+
+    font-weight: 400;
+
+    letter-spacing: 7px;
+}
+
+
+.ygg-detail-line {
+    width: 70px;
+
+    height: 1px;
+
+    margin:
+        25px 0;
+
+    background: #c9a96e;
+}
+
+
+.ygg-detail-info p {
+    color: #888;
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+
+/* =========================================================
+   DETAIL ARROWS
+========================================================= */
+
+.ygg-detail-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    z-index: 10;
+
+    width: 45px;
+    height: 70px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #c9a96e;
+
+    font-size: 48px;
+
+    font-weight: 200;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.ygg-detail-arrow:hover {
+    color: #ffffff;
+
+    transform:
+        translateY(-50%)
+        scale(1.15);
+}
+
+
+.ygg-detail-prev {
+    left: 25px;
+}
+
+
+.ygg-detail-next {
+    right: 25px;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .ygg-map-section {
+        height: 700px;
+    }
+
+
+    .ygg-map-title {
+        left: 25px;
+        top: 35px;
+    }
+
+
+    .ygg-map-title h1 {
+        font-size: 28px;
+    }
+
+
+    .ygg-detail-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .ygg-detail-info {
+        max-width: none;
+    }
+
+
+    .ygg-detail-info h2 {
+        font-size: 34px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .ygg-map-section {
+        height: 600px;
+    }
+
+
+    .ygg-map-title {
+        left: 20px;
+        top: 25px;
+    }
+
+
+    .ygg-map-title h1 {
+        font-size: 24px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .ygg-map {
+        width: 1400px;
+        height: 850px;
+    }
+
+
+    .ygg-location-name {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .ygg-location-icon {
+        width: 34px;
+        height: 34px;
+
+        font-size: 14px;
+    }
+
+
+    .ygg-map-hint {
+        bottom: 20px;
+
+        font-size: 8px;
+    }
+
+
+    .ygg-detail-section {
+        padding:
+            70px 25px;
+    }
+
+
+    .ygg-detail-arrow {
+        display: none;
+    }
+
+
+    .ygg-detail-info h2 {
+        font-size: 28px;
+    }
+
+}
