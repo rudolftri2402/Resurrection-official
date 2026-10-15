@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Resurrection Side Story | Manga</title>
+    <link rel="stylesheet" href="manga.css">
+</head>
+
+<body class="manga-reader-page">
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<header class="manga-reader-header">
+    <a
+        href="manga.html"
+        class="manga-back-button">
+        ← BACK TO SIDE STORY
+    </a>
+
+    <div class="manga-reader-title">
+
+        <span class="manga-reader-label">
+            RESURRECTION
+        </span>
+
+        <h1 id="readerTitle">
+            SIDE STORY
+        </h1>
+
+        <p id="readerChapter">
+            SIDE STORY 01
+        </p>
+
+    </div>
+
+
+    <div class="manga-reader-counter">
+
+        <span id="chapterCounter">
+            01 / 03
+        </span>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MANGA READER
+========================================================= -->
+
+<main class="manga-reader">
+
+    <div
+        id="mangaPages"
+        class="manga-pages"
+    >
+    </div>
+
+</main>
+
+
+
+<!-- =========================================================
+     CHAPTER NAVIGATION
+========================================================= -->
+
+<section class="manga-reader-navigation">
+
+    <button
+        id="previousChapter"
+        class="manga-navigation-button previous"
+    >
+
+        <span class="navigation-arrow">
+            ←
+        </span>
+
+        <span>
+
+            <small>
+                PREVIOUS
+            </small>
+
+            <strong id="previousTitle">
+                SIDE STORY 01
+            </strong>
+
+        </span>
+
+    </button>
+
+
+
+    <a
+        href="gallery-manga.html"
+        class="manga-navigation-back"
+    >
+
+        <span>
+            MANGA
+        </span>
+
+        <small>
+            CHAPTER LIST
+        </small>
+
+    </a>
+
+
+
+    <button
+        id="nextChapter"
+        class="manga-navigation-button next"
+    >
+
+        <span>
+
+            <small>
+                NEXT
+            </small>
+
+            <strong id="nextTitle">
+                SIDE STORY 02
+            </strong>
+
+        </span>
+
+        <span class="navigation-arrow">
+            →
+        </span>
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+
+        <span>
+            蘇生
+        </span>
+
+        <strong>
+            RESURRECTION
+        </strong>
+
+    </div>
+
+    <p>
+        © 2026 Resurrection. All rights reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+const sideStories = [
+
+    {
+        number: "01",
+
+        title: "A QUIET DAY",
+
+        pages: 5,
+
+        folder: "images/manga/side/side-01/",
+
+        description:
+            "A quiet moment from the world of Resurrection."
+    },
+
+
+    {
+        number: "02",
+
+        title: "BEFORE THE JOURNEY",
+
+        pages: 6,
+
+        folder: "images/manga/side/side-02/",
+
+        description:
+            "A story from before the journey truly began."
+    },
+
+
+    {
+        number: "03",
+
+        title: "ANOTHER PERSPECTIVE",
+
+        pages: 7,
+
+        folder: "images/manga/side/side-03/",
+
+        description:
+            "Another perspective hidden within the story."
+    }
+
+];
+
+
+
+/* =========================================================
+   GET CHAPTER FROM URL
+========================================================= */
+
+const urlParams =
+    new URLSearchParams(window.location.search);
+
+const story =
+    urlParams.get("story") || "side";
+
+const chapter =
+    urlParams.get("chapter") || "01";
+
+
+
+/* =========================================================
+   FIND CHAPTER
+========================================================= */
+
+let currentIndex =
+    sideStories.findIndex(
+        item => item.number === chapter
+    );
+
+
+if (currentIndex === -1) {
+    currentIndex = 0;
+}
+
+
+
+/* =========================================================
+   LOAD CHAPTER
+========================================================= */
+
+function loadChapter(index) {
+
+    const data =
+        sideStories[index];
+
+
+    /* -----------------------------------------
+       TITLE
+    ----------------------------------------- */
+
+    document.getElementById("readerTitle").textContent =
+        "RESURRECTION SIDE STORY";
+
+
+    document.getElementById("readerChapter").textContent =
+        `SIDE STORY ${data.number} — ${data.title}`;
+
+
+    document.getElementById("chapterCounter").textContent =
+        `${data.number} / ${String(sideStories.length).padStart(2, "0")}`;
+
+
+
+    /* -----------------------------------------
+       MANGA PAGES
+    ----------------------------------------- */
+
+    const mangaPages =
+        document.getElementById("mangaPages");
+
+    mangaPages.innerHTML = "";
+
+
+    for (
+        let page = 1;
+        page <= data.pages;
+        page++
+    ) {
+
+        const image =
+            document.createElement("img");
+
+        image.className =
+            "manga-reader-image";
+
+        image.src =
+            `${data.folder}page-${String(page).padStart(2, "0")}.jpg`;
+
+        image.alt =
+            `Resurrection Side Story ${data.number} - Page ${page}`;
+
+        image.loading =
+            page === 1 ? "eager" : "lazy";
+
+
+        image.onerror = function () {
+
+            this.classList.add(
+                "manga-page-missing"
+            );
+
+            this.alt =
+                `Page ${page} is not available yet`;
+
+        };
+
+
+        mangaPages.appendChild(image);
+
+    }
+
+
+
+    /* -----------------------------------------
+       PREVIOUS
+    ----------------------------------------- */
+
+    const previousButton =
+        document.getElementById(
+            "previousChapter"
+        );
+
+
+    if (index > 0) {
+
+        previousButton.style.display =
+            "flex";
+
+
+        document.getElementById(
+            "previousTitle"
+        ).textContent =
+            `SIDE STORY ${sideStories[index - 1].number}`;
+
+    }
+
+    else {
+
+        previousButton.style.display =
+            "none";
+
+    }
+
+
+
+    /* -----------------------------------------
+       NEXT
+    ----------------------------------------- */
+
+    const nextButton =
+        document.getElementById(
+            "nextChapter"
+        );
+
+
+    if (index < sideStories.length - 1) {
+
+        nextButton.style.display =
+            "flex";
+
+
+        document.getElementById(
+            "nextTitle"
+        ).textContent =
+            `SIDE STORY ${sideStories[index + 1].number}`;
+
+    }
+
+    else {
+
+        nextButton.style.display =
+            "none";
+
+    }
+
+
+
+    /* -----------------------------------------
+       URL
+    ----------------------------------------- */
+
+    const newURL =
+        `manga-reader.html?story=side&chapter=${data.number}`;
+
+    window.history.replaceState(
+        {},
+        "",
+        newURL
+    );
+
+
+    /* -----------------------------------------
+       PAGE TITLE
+    ----------------------------------------- */
+
+    document.title =
+        `Side Story ${data.number} — ${data.title} | Resurrection`;
+
+
+    /* -----------------------------------------
+       SCROLL TOP
+    ----------------------------------------- */
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+
+/* =========================================================
+   PREVIOUS CHAPTER
+========================================================= */
+
+document.getElementById(
+    "previousChapter"
+).addEventListener(
+    "click",
+    function () {
+
+        if (currentIndex > 0) {
+
+            currentIndex--;
+
+            loadChapter(currentIndex);
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   NEXT CHAPTER
+========================================================= */
+
+document.getElementById(
+    "nextChapter"
+).addEventListener(
+    "click",
+    function () {
+
+        if (
+            currentIndex <
+            sideStories.length - 1
+        ) {
+
+            currentIndex++;
+
+            loadChapter(currentIndex);
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   KEYBOARD NAVIGATION
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (
+            event.key === "ArrowLeft" &&
+            currentIndex > 0
+        ) {
+
+            currentIndex--;
+
+            loadChapter(currentIndex);
+
+        }
+
+
+        if (
+            event.key === "ArrowRight" &&
+            currentIndex <
+            sideStories.length - 1
+        ) {
+
+            currentIndex++;
+
+            loadChapter(currentIndex);
+
+        }
+
+
+        if (event.key === "Escape") {
+
+            window.location.href =
+                "gallery-manga.html";
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+loadChapter(currentIndex);
+
+</script>
+
+
+</body>
+
+</html>
