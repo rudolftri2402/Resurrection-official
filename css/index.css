@@ -112,46 +112,80 @@ body::before {
 
 /* Navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    background-color: #000000;
-
-    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #111;
+    position: relative;
+    z-index: 100;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo {
+    color: #c9a96e;
+    text-decoration: none;
+    font-weight: bold;
+}
 
+/* MENU PC */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.navbar li {
-    margin: 0;
-}
-
-.navbar a {
-    display: block;
-
+.nav-menu a {
     color: white;
     text-decoration: none;
-
-    font-size: 18px;
-    font-weight: bold;
-
-    padding: 15px 22px;
 }
 
-.navbar a:hover {
-    background-color: #d8b56b;
+.nav-menu a:hover {
+    color: #c9a96e;
 }
 
+/* Tombol hamburger disembunyikan di PC */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background: #111;
+        padding: 10px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 14px 5%;
+    }
+}
 /* ========================================
    HOME PAGE
 ======================================== */
