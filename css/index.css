@@ -110,82 +110,187 @@ body::before {
             font-size: 14px;
         }
 
-/* Navbar */
+
+/* ==============================
+   RESPONSIVE NAVBAR - RESURRECTION
+============================== */
+
 .navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 12px 5%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    background: #111;
+    justify-content: space-between;
+    gap: 25px;
     position: relative;
-    z-index: 100;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
+/* Logo */
 .logo {
-    color: #c9a96e;
-    text-decoration: none;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
 }
 
-/* MENU PC */
+.logo-japanese {
+    font-size: 30px;
+}
+
+.logo-title {
+    font-size: 20px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+/* Menu navigasi */
 .nav-menu {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 25px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+.nav-menu li {
+    list-style: none;
+}
+
 .nav-menu a {
-    color: white;
+    display: block;
     text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
 }
 
-.nav-menu a:hover {
-    color: #c9a96e;
-}
-
-/* Tombol hamburger disembunyikan di PC */
-.menu-toggle {
+/* Tombol hamburger */
+.nav-toggle {
     display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
+    background: transparent;
+    border: 1px solid #b99a55;
+    color: #d6bd7a;
+    font-size: 27px;
+    width: 44px;
+    height: 42px;
+    border-radius: 5px;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 
-/* TAMPILAN HP */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+/* Tablet dan layar kecil */
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 12px 4%;
+        gap: 15px;
+    }
+
+    .logo-japanese {
+        font-size: 26px;
+    }
+
+    .logo-title {
+        font-size: 17px;
     }
 
     .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+}
+
+/* Tampilan HP */
+@media screen and (max-width: 700px) {
+    .navbar {
+        min-height: 68px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .logo-japanese {
+        font-size: 25px;
+    }
+
+    .logo-title {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    /* Tampilkan tombol hamburger */
+    .nav-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    /* Menu disembunyikan sebelum tombol ditekan */
+    .nav-menu {
         display: none;
+        width: 100%;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-
-        background: #111;
-        padding: 10px 0;
+        padding: 8px 0;
+        margin-top: 5px;
+        background: #101010;
+        border-top: 1px solid #4b3d22;
     }
 
+    /* Menu terbuka */
     .nav-menu.active {
         display: flex;
     }
 
-    .nav-menu li a {
-        display: block;
-        padding: 14px 5%;
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu a {
+        padding: 14px 10px;
+        font-size: 15px;
+        white-space: normal;
+        border-bottom: 1px solid rgba(185, 154, 85, 0.15);
+    }
+
+    .nav-menu a:hover {
+        color: #d6bd7a;
+        background: rgba(185, 154, 85, 0.08);
     }
 }
+
+/* HP yang sangat kecil */
+@media screen and (max-width: 360px) {
+    .navbar {
+        padding: 10px 3%;
+    }
+
+    .logo {
+        gap: 7px;
+    }
+
+    .logo-japanese {
+        font-size: 22px;
+    }
+
+    .logo-title {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 23px;
+    }
+}
+
 /* ========================================
    HOME PAGE
 ======================================== */
