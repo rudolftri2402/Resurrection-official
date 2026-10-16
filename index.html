@@ -361,19 +361,7 @@ menuToggle.addEventListener("click", function () {
 
     </footer>
 
-<script>
-    const navToggle = document.getElementById("navToggle");
-    const navMenu = document.getElementById("navMenu");
-
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-            const isOpen = navMenu.classList.toggle("active");
-
-            navToggle.setAttribute("aria-expanded", isOpen);
-            navToggle.textContent = isOpen ? "✕" : "☰";
-        });
-    }
-</script>
+<script src="navbar.js"></script>
 
 </body>
 
