@@ -361,6 +361,7 @@ menuToggle.addEventListener("click", function () {
 
     </footer>
 
+<script>
     const navToggle = document.getElementById("navToggle");
     const navMenu = document.getElementById("navMenu");
 
@@ -369,14 +370,10 @@ menuToggle.addEventListener("click", function () {
             const isOpen = navMenu.classList.toggle("active");
 
             navToggle.setAttribute("aria-expanded", isOpen);
-            navToggle.setAttribute(
-                "aria-label",
-                isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"
-            );
             navToggle.textContent = isOpen ? "✕" : "☰";
         });
     }
-
+</script>
 
 </body>
 
