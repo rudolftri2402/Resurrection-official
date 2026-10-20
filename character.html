@@ -1,866 +1,480 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Characters | Resurrection</title>
-
     <link rel="stylesheet" href="css/gallery/character.css">
 </head>
-
-<body class="character-page">
-
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-
-    <nav class="navbar">
-        <ul class="nav-menu">
-
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="news.html">News</a>
-            </li>
-
-            <li>
-                <a href="gallery.html" class="active">Gallery</a>
-            </li>
-
-            <li>
-                <a href="information.html">Information</a>
-            </li>
-
-            <li>
-                <a href="download.html">Download</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-
-    <!-- =========================
-         CHARACTER HEADER
-    ========================== -->
-
-    <div class="character-header">
-
-        <span>GALLERY</span>
-
-        <span class="header-line">/</span>
-
-        <strong>CHARACTERS</strong>
-
-    </div>
-
-
-    <!-- =========================
-         CHARACTER SHOWCASE
-    ========================== -->
-
-    <main class="character-showcase">
-
-
-        <!-- LEFT CATEGORY -->
-
-        <aside class="character-category">
-
-            <div class="category-title">
-                CHARACTERS
-            </div>
-
-
-            <button class="category-button active"
-                    data-category="all">
-
-                <span class="category-number">01</span>
-
-                <span>ALL</span>
-
-            </button>
-
-
-            <button class="category-button"
-                    data-category="human">
-
-                <span class="category-number">02</span>
-
-                <span>HUMAN</span>
-
-            </button>
-
-
-            <button class="category-button"
-                    data-category="angel">
-
-                <span class="category-number">03</span>
-
-                <span>ANGEL</span>
-
-            </button>
-
-
-            <button class="category-button"
-                    data-category="demon">
-
-                <span class="category-number">04</span>
-
-                <span>DEMON</span>
-
-            </button>
-
-
-            <button class="category-button"
-                    data-category="elf">
-
-                <span class="category-number">05</span>
-
-                <span>ELF</span>
-
-            </button>
-
-        </aside>
-
-
-
-        <!-- MAIN CHARACTER -->
-
-        <section class="character-display">
-
-
-            <!-- Background -->
-
-            <div class="character-background"
-                 id="characterBackground">
-            </div>
-
-
-            <!-- Character Information -->
-
-            <div class="character-info">
-
-
-                <div class="character-name-area">
-
-                    <div class="character-number"
-                         id="characterNumber">
-                        01
-                    </div>
-
-                    <div>
-
-                        <h1 id="characterName">
-                            SERA
-                        </h1>
-
-                        <p id="characterTitle">
-                            THE GIRL WHO AWAKENED
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Story -->
-
-                <div class="character-story">
-
-                    <div class="story-title">
-                        STORY
-                    </div>
-
-                    <p id="characterStory">
-
-                        A mysterious girl whose soul was
-                        awakened in a world she never knew.
-                        Carrying an unknown fate within her,
-                        Sera begins a journey that will slowly
-                        reveal the truth behind her existence.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- Character Artwork -->
-
-            <div class="character-art-wrapper">
-                <img
-                    id="characterImage"
-                    src="images/characters/sera.png"
-                    alt="Sera">
-            </div>
-
-
-
-            <!-- Element / Info -->
-
-            <div class="character-detail">
-                <span id="characterRace">
-                    HUMAN
-                </span>
-
-                <span class="detail-separator">
-                    •
-                </span>
-
-                <span id="characterElement">
-                    UNKNOWN
-                </span>
-            </div>
-        </section>
-    </main>
-
-
-
-    <!-- =========================
-         CHARACTER THUMBNAILS
-    ========================== -->
-
-    <section class="character-selector">
-        <button class="selector-arrow"
-                id="previousCharacter">
-            ‹
-        </button>
-
-        <div class="character-thumbnails"
-             id="characterThumbnails">
-
-            <button class="character-thumbnail active"
-                    data-id="serabasic">
-                <img src="gallery/character/thumbs/thumbs_serabasic.png"
-                     alt="Sera">
-            </button>
-
-            <button class="character-thumbnail active"
-                    data-id="serafirst">
-                <img src="gallery/character/thumbs/thumbs_serafirst.jpg"
-                     alt="Sera">
-            </button>
-
-            <button class="character-thumbnail active"
-                    data-id="seracorrupted">
-                <img src="gallery/character/thumbs/thumbs_seracorrupted.png"
-                     alt="Sera Corrupted">
-            </button>
-
-            <button class="character-thumbnail active"
-                    data-id="sera">
-                <img src="gallery/character/thumbs/thumbs_sera.png"
-                     alt="Sera">
-            </button>
-
-            <button class="character-thumbnail"
-                    data-id="chloe">
-                <img src="gallery/character/thumbs/thumbs_chloe.png"
-                     alt="Chloe">
-            </button>
-
-            <button class="character-thumbnail"
-                    data-id="ishtar">
-                <img src="gallery/character/thumbs/thumbs_ishtar.png"
-                     alt="Ishtar">
-            </button>
-
-            <button class="character-thumbnail"
-                    data-id="ishtar2">
-                <img src="gallery/character/thumbs/thumbs_ishtar2.png"
-                     alt="Ishtar2">
-            </button>
-
-            <button class="character-thumbnail"
-                    data-id="lucifer">
-                <img src="images/characters/thumbs/lucifer.jpg"
-                     alt="Lucifer">
-            </button>
-
-            <button class="character-thumbnail"
-                    data-id="lilyth">
-                <img src="images/characters/thumbs/lilyth.jpg"
-                     alt="Lilyth">
-            </button>
-
-            <button class="character-thumbnail"
-                    data-id="elyndor">
-                <img src="images/characters/thumbs/elyndor.jpg"
-                     alt="Elyndor">
-            </button>
-
-            <button class="character-thumbnail"
-                    data-id="vaeloryn">
-                <img src="images/characters/thumbs/vaeloryn.jpg"
-                     alt="Vaeloryn">
-            </button>
-
-            <button class="character-thumbnail"
-                    data-id="paladin">
-                <img src="images/characters/thumbs/paladin.jpg"
-                     alt="Paladin">
-            </button>
-
+<body class="codex-page">
+
+<main class="codex-container">
+
+    <header class="codex-heading">
+        <p class="codex-eyebrow">GALLERY / CHARACTER ARCHIVE</p>
+        <h1>CHARACTER <span>CODEX</span></h1>
+        <p>Discover the souls who shape the world of Resurrection.</p>
+        <div class="codex-rule"></div>
+    </header>
+
+    <section class="codex-controls">
+        <div class="codex-filters" aria-label="Filter ras">
+            <button class="race-filter selected" data-race="all">All</button>
+            <button class="race-filter" data-race="human">Human</button>
+            <button class="race-filter" data-race="angel">Angel</button>
+            <button class="race-filter" data-race="demon">Demon</button>
+            <button class="race-filter" data-race="elf">Elf</button>
         </div>
 
+        <label class="codex-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="characterSearch" type="search"
+                   placeholder="Search character..."
+                   aria-label="Search character">
+        </label>
+    </section>
 
-        <button class="selector-arrow"
-                id="nextCharacter">
+    <div class="codex-count">
+        <span>THE ARCHIVE</span>
+        <span id="characterCount">8 CHARACTERS</span>
+    </div>
 
-            ›
+    <section class="codex-grid" id="characterGrid">
 
+        <button class="codex-card"
+                data-id="seravillage" data-race="human"
+                data-name="Sera Village">
+            <div class="codex-art">
+                <img src="gallery/character/SeraVillage.png"
+                     alt="Sera Corrupted" loading="lazy">
+                <span class="codex-index">NO. 003</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Sera</h2><p>Human · Unknown</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
         </button>
+
+        <button class="codex-card"
+                data-id="serasnow" data-race="human"
+                data-name="Sera Snow">
+            <div class="codex-art">
+                <img src="gallery/character/serasnow.png"
+                     alt="Sera Corrupted" loading="lazy">
+                <span class="codex-index">NO. 002</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Sera</h2><p>Human · Unknown</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <button class="codex-card"
+                data-id="seracorrupted" data-race="human"
+                data-name="Sera Corrupted">
+            <div class="codex-art">
+                <img src="gallery/character/sera3.png"
+                     alt="Sera Corrupted" loading="lazy">
+                <span class="codex-index">NO. 003</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Sera</h2><p>Human · Unknown</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <button class="codex-card"
+                data-id="sera" data-race="human"
+                data-name="Sera">
+            <div class="codex-art">
+                <img src="gallery/character/sera_timeskip.png"
+                     alt="Sera" loading="lazy">
+                <span class="codex-index">NO. 004</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Sera</h2><p>Human · Unknown</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <button class="codex-card"
+                data-id="haruna" data-race="human"
+                data-name="Haruna">
+            <div class="codex-art">
+                <img src="gallery/character/chloe.png"
+                     alt="Haruna" loading="lazy">
+                <span class="codex-index">NO. 005</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Haruna</h2><p>Human · Support</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <button class="codex-card"
+                data-id="ishtar" data-race="human"
+                data-name="Ishtar">
+            <div class="codex-art">
+                <img src="gallery/character/ishtar.png"
+                     alt="Ishtar" loading="lazy">
+                <span class="codex-index">NO. 006</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Ishtar</h2><p>Human · Protector</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <button class="codex-card"
+                data-id="cedric" data-race="human"
+                data-name="Cedric">
+            <div class="codex-art">
+                <img src="gallery/character/cedric.png"
+                     alt="Lucifer" loading="lazy">
+                <span class="codex-index">NO. 007</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Lucifer</h2><p>Human · Light</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <button class="codex-card"
+                data-id="lucifer" data-race="angel"
+                data-name="Lucifer">
+            <div class="codex-art">
+                <img src="gallery/character/lucifer.png"
+                     alt="Lucifer" loading="lazy">
+                <span class="codex-index">NO. 007</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Lucifer</h2><p>Fallen Angel · Darkness</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <button class="codex-card"
+                data-id="lilyth" data-race="demon"
+                data-name="Lilyth">
+            <div class="codex-art">
+                <img src="images/characters/lilyth.png"
+                     alt="Lilyth" loading="lazy">
+                <span class="codex-index">NO. 008</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Lilyth</h2><p>Demon · Unknown</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <button class="codex-card"
+                data-id="elyndor" data-race="elf"
+                data-name="Elyndor">
+            <div class="codex-art">
+                <img src="gallery/character/elyndor.png"
+                     alt="Elyndor" loading="lazy">
+                <span class="codex-index">NO. 009</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Elyndor</h2><p>Light Elf · Light</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <button class="codex-card"
+                data-id="vaeloryn" data-race="elf"
+                data-name="Vaeloryn">
+            <div class="codex-art">
+                <img src="images/characters/vaeloryn.png"
+                     alt="Vaeloryn" loading="lazy">
+                <span class="codex-index">NO. 010</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Vaeloryn</h2><p>Dark Elf · Darkness</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <button class="codex-card"
+                data-id="paladin" data-race="human"
+                data-name="Paladin">
+            <div class="codex-art">
+                <img src="images/characters/paladin.png"
+                     alt="Paladin" loading="lazy">
+                <span class="codex-index">NO. 011</span>
+                <span class="codex-open">VIEW PROFILE ↗</span>
+            </div>
+            <div class="codex-card-info">
+                <div><h2>Paladin</h2><p>Human · Warrior</p></div>
+                <span class="codex-arrow">↗</span>
+            </div>
+        </button>
+
+        <p class="codex-empty" id="noCharacters" hidden>
+            No characters found.
+        </p>
 
     </section>
 
-
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
-    <script>
-
-        const characters = {
-
-            serabasic: {
-                number: "03",
-                name: "SERA",
-                title: "THE UWRITTEN GIRL",
-                race: "HUMAN",
-                element: "UNKNOWN",
-
-                image: "images/characters/sera.png",
-
-                background:
-                    "images/characters/backgrounds/sera-bg.jpg",
-
-                story:
-                    "A mysterious girl whose soul was awakened in a world she never knew. Carrying an unknown fate within her, Sera begins a journey that will slowly reveal the truth behind her existence."
-            },
-    
-            serafirst: {
-                number: "03",
-                name: "SERA",
-                title: "ECHO OF THE DEPTHS",
-                race: "HUMAN",
-                element: "UNKNOWN",
-
-                image: "images/characters/sera.png",
-
-                background:
-                    "images/characters/backgrounds/sera-bg.jpg",
-
-                story:
-                    "A mysterious girl whose soul was awakened in a world she never knew. Carrying an unknown fate within her, Sera begins a journey that will slowly reveal the truth behind her existence."
-            },
-
-            seracorrupted: {
-                number: "02",
-                name: "SERA",
-                title: "VESSEL OF DECAY",
-                race: "HUMAN",
-                element: "UNKNOWN",
-
-                image: "images/characters/sera.png",
-
-                background:
-                    "images/characters/backgrounds/sera-bg.jpg",
-
-                story:
-                    "A mysterious girl whose soul was awakened in a world she never knew. Carrying an unknown fate within her, Sera begins a journey that will slowly reveal the truth behind her existence."
-            },
-
-            sera: {
-                number: "01",
-                name: "SERA",
-                title: "ARCHIVIST OF THE WORLD'S BONES",
-                race: "HUMAN",
-                element: "UNKNOWN",
-
-                image: "gallery/character/sera_timeskip.png",
-
-                background:
-                    "images/characters/backgrounds/sera-bg.jpg",
-
-                story:
-                    "A mysterious girl whose soul was awakened in a world she never knew. Carrying an unknown fate within her, Sera begins a journey that will slowly reveal the truth behind her existence."
-            },
-
-            chloe: {
-                number: "04",
-                name: "CHLOE",
-                title: "THE GENTLE BLESSING",
-
-                race: "HUMAN",
-                element: "LIGHT",
-
-                image:
-                    "images/characters/haruna.png",
-
-                background:
-                    "images/characters/backgrounds/haruna-bg.jpg",
-
-                story:
-                    "A gentle companion who supports those around her. Her blessing can heal wounds and strengthen the people she chooses to protect."
-            },
-
-            ishtar: {
-                number: "04",
-                name: "ISHTAR",
-                title: "THE VILLAGE PROTECTOR",
-
-                race: "HUMAN",
-                element: "EARTH",
-
-                image:
-                    "images/characters/ishtar.png",
-
-                background:
-                    "images/characters/backgrounds/ishtar-bg.jpg",
-
-                story:
-                    "A protector who lives among ordinary people. Despite her quiet life, Ishtar carries a strength capable of standing against the darkness threatening her home."
-            },
-
-            ishtar2: {
-                number: "04",
-                name: "ISHTAR",
-                title: "THE VILLAGE PROTECTOR",
-
-                race: "HUMAN",
-                element: "EARTH",
-
-                image:
-                    "images/characters/ishtar.png",
-
-                background:
-                    "images/characters/backgrounds/ishtar-bg.jpg",
-
-                story:
-                    "A protector who lives among ordinary people. Despite her quiet life, Ishtar carries a strength capable of standing against the darkness threatening her home."
-            },
-
-
-            lucifer: {
-                number: "05",
-                name: "LUCIFER",
-                title: "THE FALLEN ANGEL",
-
-                race: "ANGEL",
-                element: "DARKNESS",
-
-                image:
-                    "images/characters/lucifer.png",
-
-                background:
-                    "images/characters/backgrounds/lucifer-bg.jpg",
-
-                story:
-                    "Once an angel who stood among the highest servants of Heaven. After his fall, Lucifer abandoned the light and became a figure feared by both humans and angels."
-            },
-
-
-            lilyth: {
-                number: "06",
-                name: "LILYTH",
-                title: "THE DEMON OF DESIRE",
-
-                race: "DEMON",
-                element: "DARKNESS",
-
-                image:
-                    "images/characters/lilyth.png",
-
-                background:
-                    "images/characters/backgrounds/lilyth-bg.jpg",
-
-                story:
-                    "A mysterious demon whose intentions remain difficult to understand. Her presence often brings uncertainty wherever she appears."
-            },
-
-
-            elyndor: {
-                number: "07",
-                name: "ELYNDOR",
-                title: "THE LIGHT ELF",
-
-                race: "LIGHT ELF",
-                element: "LIGHT",
-
-                image:
-                    "images/characters/elyndor.png",
-
-                background:
-                    "images/characters/backgrounds/elyndor-bg.jpg",
-
-                story:
-                    "An archer of the Light Elves who protects the forests surrounding Alfheim. Elyndor believes that balance between nature and civilization must be preserved."
-            },
-
-
-            vaeloryn: {
-                number: "08",
-                name: "VAELORYN",
-                title: "THE DARK ELF",
-
-                race: "DARK ELF",
-                element: "DARKNESS",
-
-                image:
-                    "images/characters/vaeloryn.png",
-
-                background:
-                    "images/characters/backgrounds/vaeloryn-bg.jpg",
-
-                story:
-                    "A Dark Elf who walks through the shadows of Alfheim. Her existence is tied to the conflict between the Light Elves and those who were cast into darkness."
-            },
-
-
-            paladin: {
-                number: "09",
-                name: "PALADIN",
-                title: "THE BLOODBOUND KNIGHT",
-
-                race: "HUMAN",
-                element: "FIRE",
-
-                image:
-                    "images/characters/paladin.png",
-
-                background:
-                    "images/characters/backgrounds/paladin-bg.jpg",
-
-                story:
-                    "A warrior clad in armor who walks the battlefield without hesitation. Behind his heroic appearance lies a man who trusts very few people."
-            }
-
-        };
-
-
-
-        /* =========================
-           ELEMENT REFERENCES
-        ========================== */
-
-        const characterName =
-            document.getElementById("characterName");
-
-        const characterTitle =
-            document.getElementById("characterTitle");
-
-        const characterStory =
-            document.getElementById("characterStory");
-
-        const characterImage =
-            document.getElementById("characterImage");
-
-        const characterBackground =
-            document.getElementById("characterBackground");
-
-        const characterNumber =
-            document.getElementById("characterNumber");
-
-        const characterRace =
-            document.getElementById("characterRace");
-
-        const characterElement =
-            document.getElementById("characterElement");
-
-
-
-        /* =========================
-           CHANGE CHARACTER
-        ========================== */
-
-        function changeCharacter(id) {
-
-            const character = characters[id];
-
-            if (!character) return;
-
-
-            /* Fade */
-
-            document
-                .querySelector(".character-display")
-                .classList.add("changing");
-
-
-            setTimeout(() => {
-
-
-                characterNumber.textContent =
-                    character.number;
-
-                characterName.textContent =
-                    character.name;
-
-                characterTitle.textContent =
-                    character.title;
-
-                characterStory.textContent =
-                    character.story;
-
-                characterRace.textContent =
-                    character.race;
-
-                characterElement.textContent =
-                    character.element;
-
-                characterImage.src =
-                    character.image;
-
-                characterImage.alt =
-                    character.name;
-
-                characterBackground.style.backgroundImage =
-                    `url("${character.background}")`;
-
-
-                document
-                    .querySelectorAll(".character-thumbnail")
-                    .forEach(button => {
-
-                        button.classList.remove("active");
-
-                    });
-
-
-                const activeButton =
-                    document.querySelector(
-                        `[data-id="${id}"]`
-                    );
-
-
-                if (activeButton) {
-
-                    activeButton.classList.add("active");
-
-                }
-
-
-                document
-                    .querySelector(".character-display")
-                    .classList.remove("changing");
-
-
-            }, 300);
-
-        }
-
-
-
-        /* =========================
-           THUMBNAIL CLICK
-        ========================== */
-
-        document
-            .querySelectorAll(".character-thumbnail")
-            .forEach(button => {
-
-                button.addEventListener(
-                    "click",
-                    () => {
-
-                        changeCharacter(
-                            button.dataset.id
-                        );
-
-                    }
-                );
-
-            });
-
-
-
-        /* =========================
-           CATEGORY FILTER
-        ========================== */
-
-        const categoryButtons =
-            document.querySelectorAll(
-                ".category-button"
-            );
-
-
-        categoryButtons.forEach(button => {
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    categoryButtons.forEach(btn => {
-
-                        btn.classList.remove("active");
-
-                    });
-
-
-                    button.classList.add("active");
-
-
-                    const category =
-                        button.dataset.category;
-
-
-                    document
-                        .querySelectorAll(".character-thumbnail")
-                        .forEach(thumbnail => {
-
-                            const id =
-                                thumbnail.dataset.id;
-
-                            const character =
-                                characters[id];
-
-
-                            if (
-                                category === "all" ||
-                                character.race
-                                    .toLowerCase()
-                                    .includes(category)
-                            ) {
-
-                                thumbnail.style.display =
-                                    "flex";
-
-                            } else {
-
-                                thumbnail.style.display =
-                                    "none";
-
-                            }
-
-                        });
-
-                }
-            );
-
-        });
-
-
-
-        /* =========================
-           NEXT / PREVIOUS
-        ========================== */
-
-        const characterIds =
-            Object.keys(characters);
-
-        let currentIndex = 0;
-
-
-        function getVisibleCharacters() {
-
-            return characterIds.filter(id => {
-
-                const thumbnail =
-                    document.querySelector(
-                        `[data-id="${id}"]`
-                    );
-
-                return thumbnail &&
-                    thumbnail.style.display !== "none";
-
-            });
-
-        }
-
-
-        document
-            .getElementById("nextCharacter")
-            .addEventListener(
-                "click",
-                () => {
-
-                    const visible =
-                        getVisibleCharacters();
-
-                    if (!visible.length) return;
-
-
-                    const currentId =
-                        document
-                            .querySelector(
-                                ".character-thumbnail.active"
-                            )
-                            ?.dataset.id;
-
-
-                    let index =
-                        visible.indexOf(currentId);
-
-
-                    index =
-                        (index + 1) %
-                        visible.length;
-
-
-                    changeCharacter(
-                        visible[index]
-                    );
-
-                }
-            );
-
-
-        document
-            .getElementById("previousCharacter")
-            .addEventListener(
-                "click",
-                () => {
-
-                    const visible =
-                        getVisibleCharacters();
-
-                    if (!visible.length) return;
-
-
-                    const currentId =
-                        document
-                            .querySelector(
-                                ".character-thumbnail.active"
-                            )
-                            ?.dataset.id;
-
-
-                    let index =
-                        visible.indexOf(currentId);
-
-
-                    index =
-                        (index - 1 +
-                            visible.length) %
-                        visible.length;
-
-
-                    changeCharacter(
-                        visible[index]
-                    );
-
-                }
-            );
-
-
-        /* Initial background */
-
-        characterBackground.style.backgroundImage =
-            `url("${characters.sera.background}")`;
-
-    </script>
+</main>
+
+<!-- DETAIL MODAL -->
+<div class="codex-modal" id="characterModal"
+     role="dialog" aria-modal="true"
+     aria-labelledby="modalName" hidden>
+
+    <div class="codex-modal-panel">
+        <button class="modal-close" id="closeModal"
+                aria-label="Close profile">×</button>
+
+        <div class="modal-art">
+            <img id="modalImage" src="" alt="">
+        </div>
+
+        <div class="modal-content">
+            <p class="codex-eyebrow" id="modalNumber">CHARACTER PROFILE</p>
+            <h2 id="modalName">Sera</h2>
+            <p class="modal-subtitle" id="modalSubtitle"></p>
+
+            <div class="modal-divider"></div>
+
+            <p class="modal-label">STORY</p>
+            <p class="modal-story" id="modalStory"></p>
+
+            <div class="modal-meta">
+                <span>RACE</span>
+                <strong id="modalRace"></strong>
+                <span>ELEMENT</span>
+                <strong id="modalElement"></strong>
+            </div>
+
+            <div class="modal-navigation">
+                <button id="modalPrevious">← Previous</button>
+                <button id="modalNext">Next →</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Resurrection. All Rights Reserved.</p>
+</footer>
+
+<script>
+const characterData = {
+
+    seravillage: {
+        name: "Sera",
+        number: "NO. 001",
+        subtitle: "THE GIRL WHO AWAKENED",
+        race: "Human",
+        element: "Unknown",
+        image: "gallery/character/SeraVillage.png",
+        story: "Seorang gadis yang membawa dosa yang tidak bisa dihapus"
+    },
+    serasnow: {
+        name: "Sera",
+        number: "NO. 002",
+        subtitle: "THE GIRL WHO AWAKENED",
+        race: "Human",
+        element: "Unknown",
+        image: "gallery/character/serasnow.png",
+        story: "Seorang gadis yang membawa dosa yang tidak bisa dihapus"
+    },
+    seracorrupted: {
+        name: "Sera Corrupted",
+        number: "NO. 003",
+        subtitle: "THE GIRL WHO AWAKENED",
+        race: "Human",
+        element: "Unknown",
+        image: "gallery/character/sera3.png",
+        story: "Seorang gadis yang membawa dosa yang tidak bisa dihapus"
+    },
+    sera: {
+        name: "Sera",
+        number: "NO. 001",
+        subtitle: "THE GIRL WHO AWAKENED",
+        race: "Human",
+        element: "Unknown",
+        image: "gallery/character/sera_timeskip.png",
+        story: "Seorang gadis misterius yang terbangun di dunia yang asing baginya. Membawa takdir yang belum diketahui, Sera memulai perjalanan untuk mengungkap kebenaran di balik keberadaannya."
+    },
+    haruna: {
+        name: "Haruna",
+        number: "NO. 002",
+        subtitle: "THE GENTLE BLESSING",
+        race: "Human",
+        element: "Light",
+        image: "images/characters/haruna.png",
+        story: "Seorang pendamping yang lembut dan peduli terhadap orang-orang di sekitarnya. Berkatnya mampu menyembuhkan luka dan memperkuat mereka yang ingin ia lindungi."
+    },
+    ishtar: {
+        name: "Ishtar",
+        number: "NO. 003",
+        subtitle: "THE VILLAGE PROTECTOR",
+        race: "Human",
+        element: "Earth",
+        image: "images/characters/ishtar.png",
+        story: "Pelindung yang hidup di tengah masyarakat desa. Di balik kehidupannya yang tenang, Ishtar menyimpan kekuatan untuk menghadapi ancaman yang mendekati rumahnya."
+    },
+    cedric: {
+        name: "Cedric",
+        number: "NO. 004",
+        subtitle: "Hero",
+        race: "Human",
+        element: "Darkness",
+        image: "images/characters/cedric.png",
+        story: "Malaikat yang telah jatuh dari kedudukannya. Kehadirannya menyimpan masa lalu yang rumit dan hubungan yang tidak sederhana dengan cahaya."
+    },
+    lucifer: {
+        name: "Lucifer",
+        number: "NO. 004",
+        subtitle: "THE FALLEN ANGEL",
+        race: "Angel",
+        element: "Darkness",
+        image: "images/characters/lucifer.png",
+        story: "Malaikat yang telah jatuh dari kedudukannya. Kehadirannya menyimpan masa lalu yang rumit dan hubungan yang tidak sederhana dengan cahaya."
+    },
+    lilyth: {
+        name: "Lilyth",
+        number: "NO. 005",
+        subtitle: "THE MYSTERIOUS DEMON",
+        race: "Demon",
+        element: "Darkness",
+        image: "images/characters/lilyth.png",
+        story: "Sosok iblis misterius yang tujuan sebenarnya sulit dipahami. Kehadirannya membawa pertanyaan dan ketidakpastian bagi siapa pun yang ditemuinya."
+    },
+    elyndor: {
+        name: "Elyndor",
+        number: "NO. 006",
+        subtitle: "THE LIGHT ELF ARCHER",
+        race: "Light Elf",
+        element: "Light",
+        image: "images/characters/elyndor.png",
+        story: "Pemanah dari Light Elf yang menjaga hutan Alfheim. Ia percaya keseimbangan alam harus dipertahankan meski konflik terus mengancam bangsanya."
+    },
+    vaeloryn: {
+        name: "Vaeloryn",
+        number: "NO. 007",
+        subtitle: "THE DARK ELF",
+        race: "Dark Elf",
+        element: "Darkness",
+        image: "images/characters/vaeloryn.png",
+        story: "Dark Elf yang berjalan di balik bayangan Alfheim. Keberadaannya terikat dengan konflik panjang antara Light Elf dan Dark Elf."
+    },
+    paladin: {
+        name: "Paladin",
+        number: "NO. 008",
+        subtitle: "THE BLOODBOUND KNIGHT",
+        race: "Human",
+        element: "Fire",
+        image: "images/characters/paladin.png",
+        story: "Seorang ksatria yang berdiri di garis depan pertempuran. Di balik penampilannya yang heroik, ia adalah prajurit yang berhati-hati dalam menaruh kepercayaan."
+    }
+};
+
+const cards = [...document.querySelectorAll(".codex-card")];
+const filters = [...document.querySelectorAll(".race-filter")];
+const search = document.getElementById("characterSearch");
+const modal = document.getElementById("characterModal");
+let activeId = "sera corrupted";
+let lastFocused = null;
+
+function filterCharacters() {
+    const race = document.querySelector(".race-filter.selected").dataset.race;
+    const query = search.value.trim().toLowerCase();
+    let visible = 0;
+
+    cards.forEach(card => {
+        const matchesRace = race === "all" ||
+            card.dataset.race === race;
+        const matchesName = card.dataset.name.toLowerCase().includes(query);
+        const show = matchesRace && matchesName;
+
+        card.hidden = !show;
+        if (show) visible++;
+    });
+
+    document.getElementById("characterCount").textContent =
+        `${visible} CHARACTER${visible === 1 ? "" : "S"}`;
+    document.getElementById("noCharacters").hidden = visible !== 0;
+}
+
+filters.forEach(button => {
+    button.addEventListener("click", () => {
+        filters.forEach(item => item.classList.remove("selected"));
+        button.classList.add("selected");
+        filterCharacters();
+    });
+});
+
+search.addEventListener("input", filterCharacters);
+
+function openProfile(id) {
+    const character = characterData[id];
+    if (!character) return;
+
+    activeId = id;
+    lastFocused = document.activeElement;
+
+    document.getElementById("modalImage").src = character.image;
+    document.getElementById("modalImage").alt = character.name;
+    document.getElementById("modalNumber").textContent = character.number;
+    document.getElementById("modalName").textContent = character.name;
+    document.getElementById("modalSubtitle").textContent = character.subtitle;
+    document.getElementById("modalStory").textContent = character.story;
+    document.getElementById("modalRace").textContent = character.race;
+    document.getElementById("modalElement").textContent = character.element;
+
+    modal.hidden = false;
+    document.body.classList.add("modal-open");
+    document.getElementById("closeModal").focus();
+}
+
+function closeProfile() {
+    modal.hidden = true;
+    document.body.classList.remove("modal-open");
+    if (lastFocused) lastFocused.focus();
+}
+
+cards.forEach(card => {
+    card.addEventListener("click", () => openProfile(card.dataset.id));
+});
+
+document.getElementById("closeModal").addEventListener("click", closeProfile);
+
+modal.addEventListener("click", event => {
+    if (event.target === modal) closeProfile();
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !modal.hidden) closeProfile();
+});
+
+function navigateProfile(direction) {
+    const ids = Object.keys(characterData);
+    const index = ids.indexOf(activeId);
+    const nextIndex = (index + direction + ids.length) % ids.length;
+    openProfile(ids[nextIndex]);
+}
+
+document.getElementById("modalPrevious").addEventListener("click",
+    () => navigateProfile(-1));
+document.getElementById("modalNext").addEventListener("click",
+    () => navigateProfile(1));
+</script>
 
 </body>
 </html>
